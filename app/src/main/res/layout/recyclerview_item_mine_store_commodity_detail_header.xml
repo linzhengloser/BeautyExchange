@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="1313px">
+
+    <!-- 上 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="70px"
+        android:background="@color/mine_store_commodity_detail_header_cut_off_rule" />
+
+    <!-- 左 -->
+    <View
+        android:layout_width="1px"
+        android:layout_height="778px"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="71px"
+        android:background="@color/mine_store_commodity_detail_header_cut_off_rule" />
+
+
+    <!-- 右 -->
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="778px"
+        android:layout_gravity="right"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="71px"
+        android:background="@color/mine_store_commodity_detail_header_cut_off_rule" />
+
+    <!-- 下 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="849px"
+        android:background="@color/mine_store_commodity_detail_header_cut_off_rule" />
+
+
+    <!-- ViewPager -->
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="520px"
+        android:layout_marginLeft="118px"
+        android:layout_marginRight="118px"
+        android:layout_marginTop="96px" />
+
+
+    <!-- 商品名称图标 -->
+    <ImageView
+        android:layout_width="31px"
+        android:layout_height="31px"
+        android:layout_marginLeft="62px"
+        android:layout_marginTop="694px"
+        android:src="@mipmap/main_item_detail_content_name_icon" />
+
+    <!-- 商品名称 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="114px"
+        android:layout_marginTop="694px"
+        android:text="BBFtm出品 黑色印花T恤..."
+        android:textColor="@color/black"
+        android:textSize="30px" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="60px"
+        android:layout_marginTop="698px"
+        android:text="3000次浏览"
+        android:textColor="@color/black"
+        android:textSize="18px" />
+    <!-- 原价 -->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="108px"
+        android:layout_marginTop="777px"
+        android:background="@mipmap/main_item_original_cost"
+        android:padding="8px">
+
+        <TextView
+            android:id="@+id/tv_item_main_simple_original_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="原价 ¥399"
+            android:textColor="@color/white"
+            android:textSize="20px" />
+    </FrameLayout>
+
+    <!-- 积分 -->
+    <com.qks.beautyexchange.ui.view.IntegralView
+        android:id="@+id/tv_item_main_simple_integral"
+        android:layout_width="28px"
+        android:layout_height="28px"
+        android:layout_gravity="right"
+        android:layout_marginRight="210px"
+        android:layout_marginTop="790px"
+        app:layout_auto_basewidth="height|width" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="158px"
+        android:layout_marginTop="792px"
+        android:text="@string/main_item_integral"
+        android:textColor="@color/main_item_simple_integral_text_bg"
+        android:textSize="24px" />
+
+    <!-- RMB -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="64px"
+        android:layout_marginTop="794px"
+        android:text=" +20RMB"
+        android:textColor="@color/black"
+        android:textSize="22px" />
+
+    <!-- 商品类型:大小 颜色 数量 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="885px"
+        android:background="@color/mine_store_commodity_detail_header_type"
+        android:orientation="vertical"
+        android:paddingTop="32px"
+        android:paddingBottom="32px">
+
+
+        <!-- 尺码 -->
+        <FrameLayout
+            android:layout_marginLeft="31px"
+            android:layout_marginRight="31px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- 大小 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/mine_store_commodity_detail_header_size_text"
+                android:textColor="@color/black"
+                android:textSize="28px" />
+
+            <!-- 尺码Tag -->
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/tfl_mine_store_commodity_detail_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150px"
+                app:gravity="center"
+                app:max_select="1" />
+
+        </FrameLayout>
+
+        <!-- 可选颜色 -->
+        <FrameLayout
+            android:layout_marginLeft="31px"
+            android:layout_marginRight="31px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26px">
+            <!-- 颜色 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/mine_store_commodity_detail_header_color_text"
+                android:textColor="@color/black"
+                android:textSize="28px" />
+
+            <!-- 颜色Tag -->
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/tfl_mine_store_commodity_detail_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150px"
+                app:max_select="1" />
+        </FrameLayout>
+
+        <!-- 数量 -->
+        <TextView
+            android:layout_marginLeft="31px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30px"
+            android:text="@string/mine_store_commodity_detail_header_count_text"
+            android:textColor="@color/black"
+            android:textSize="28px" />
+
+    </LinearLayout>
+
+    <!-- 头像 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="114px"
+        android:layout_marginRight="31px"
+        android:layout_marginLeft="31px"
+        android:layout_marginTop="1117px">
+        <!-- 右箭头 -->
+        <ImageView
+            android:layout_width="16px"
+            android:layout_height="26px"
+            android:layout_marginRight="31px"
+            android:layout_gravity="right|center_vertical"
+            android:src="@mipmap/common_red_right_arrows" />
+    </FrameLayout>
+
+    <!-- 爱心 回复 和分享 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="73px"
+        android:layout_marginTop="1231px"
+        android:layout_marginLeft="31px"
+        android:layout_marginRight="31px"
+        android:background="@color/main_item_detail_content_collection_bg">
+        <!-- 爱心 -->
+        <ImageView
+            android:layout_width="31px"
+            android:layout_height="31px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="29px"
+            android:src="@mipmap/main_item_love" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="68px"
+            android:text="42"
+            android:textColor="@color/black"
+            android:textSize="22px" />
+        <!-- 回复 -->
+        <ImageView
+            android:layout_width="31px"
+            android:layout_height="31px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="315px"
+            android:src="@mipmap/main_item_comment" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="357px"
+            android:text="2333"
+            android:textColor="@color/black"
+            android:textSize="22px" />
+
+        <!-- 分享 -->
+        <ImageView
+            android:layout_width="31px"
+            android:layout_height="31px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="626px"
+            android:src="@mipmap/main_item_share" />
+
+
+    </FrameLayout>
+
+</FrameLayout>

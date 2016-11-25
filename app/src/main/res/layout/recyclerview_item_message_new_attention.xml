@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150px">
+
+
+    <!-- 头像 -->
+    <ImageView
+        android:id="@+id/iv_item_message_new_attention_head_image"
+        android:layout_width="105px"
+        android:layout_height="105px"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="26px"
+        android:src="@mipmap/ic_launcher" />
+
+
+    <!-- 用户名 -->
+    <TextView
+        android:id="@+id/tv_item_message_new_attention_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="166px"
+        android:layout_marginTop="38px"
+        android:text="Maruko_Le"
+        android:textColor="@color/message_new_attention_user_name_color"
+        android:textSize="30px" />
+
+
+    <!-- 描述 -->
+    <TextView
+        android:id="@+id/tv_item_message_new_attention_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="165px"
+        android:layout_marginTop="95px"
+        android:textSize="26px"
+        android:text="我就是要关注你"
+        android:textColor="@color/black" />
+
+
+    <!-- 分割线 -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="149px"
+        android:layout_marginLeft="30px"
+        android:background="@color/message_new_attention_cut_off_rule"
+        />
+
+
+</FrameLayout>

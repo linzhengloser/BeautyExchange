@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="233px"
+    android:orientation="vertical">
+
+
+    <!-- 分割线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="14px"
+        android:background="@color/white" />
+
+
+    <ImageView
+        android:id="@+id/iv_item_mine_store_image"
+        android:layout_width="match_parent"
+        android:layout_height="205px"
+        android:layout_marginTop="14px"
+        android:scaleType="fitXY"
+        android:src="@mipmap/test7" />
+
+    <!-- 分割线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="14px"
+        android:layout_gravity="bottom"
+        android:background="@color/white" />
+
+
+</FrameLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="common_swipeRefreshLayout" type="id"/>
+    <item name="common_recyclerView" type="id"/>
+    <item name="common_pullRecyclerView" type="id"/>
+</resources>

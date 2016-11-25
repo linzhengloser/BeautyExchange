@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">美换</string>
+
+
+    <!-- 首页 -->
+    <string name="main_main_tab">首页</string>
+    <string name="main_find_tab">发现</string>
+    <string name="main_message_tab">消息</string>
+    <string name="main_mine_tab">我的</string>
+    <string name="main_item_integral">积分</string>
+
+    <!-- 消息 -->
+    <string name="message_title">消息</string>
+    <string name="message_comment_text">回复</string>
+    <!-- 私信 -->
+    <string name="message_private_message_comment_text">回复</string>
+    <!-- 我的 -->
+    <string name="mine_my_tab_text">我的</string>
+    <string name="mine_store_tab_text">商城</string>
+
+    <string name="mine_my_tab_release_text">我发布的</string>
+    <string name="mine_my_tab_buy_text">我买到的</string>
+    <string name="mine_my_tab_sells_text">我买到的</string>
+    <string name="mine_my_tab_collection_text">我收藏的</string>
+    <string name="mine_my_tab_no_data_text">衣柜空空哒?\n去商场看看吧~</string>
+    <string name="mine_my_tab_wait_go_text">我知道啦,等下去~</string>
+    <string name="mine_my_tab_now_go_text">恩,现在就去~</string>
+    <string name="mine_store_item_detail_title_text">商城</string>
+
+    <!-- 商城中的商品详情 -->
+    <string name="mine_store_commodity_detail_header_size_text">尺寸</string>
+    <string name="mine_store_commodity_detail_header_color_text">可选颜色</string>
+    <string name="mine_store_commodity_detail_header_count_text">数量</string>
+
+
+
+
+</resources>

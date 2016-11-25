@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:fitsSystemWindows="true">
+
+    <!-- 顶部导航栏 -->
+    <com.qks.beautyexchange.ui.view.CommonTitleView
+        android:id="@+id/ctv_main_title"
+        android:layout_width="match_parent"
+        android:layout_height="110px"
+        android:background="?attr/colorPrimary"
+        app:commonTitleIsShowTitle="false"
+        app:commonTitleLeftImage="@mipmap/main_menu"
+        app:commonTitleRightImage="@mipmap/main_search"/>
+
+    <!--&lt;!&ndash; 顶部分割线 &ndash;&gt;-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10px"
+        android:layout_marginTop="100px"
+        android:background="@color/main_top_cut_off_rule"/>
+
+    <com.qks.beautyexchange.ui.view.recyclerview.PullRecyclerView
+        android:id="@id/common_pullRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="110px"/>
+
+    <!-- 底部导航栏 -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="109px"
+        android:background="@color/main_bottom_navigation_menu_cut_off_rule"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110px"
+        android:layout_gravity="bottom"
+        android:alpha="0.8"
+        android:background="@color/main_bottom_navigation_menu_bg"
+        android:orientation="horizontal">
+
+
+        <!-- 首页-->
+        <LinearLayout
+            android:id="@+id/ll_main"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50px"
+                android:layout_height="40px"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10px"
+                android:src="@mipmap/main_tab_main"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10px"
+                android:text="@string/main_main_tab"
+                android:textColor="@color/main_tab_text_color"
+                android:textSize="33px"/>
+
+        </LinearLayout>
+
+        <!-- 发现-->
+        <LinearLayout
+            android:id="@+id/ll_find"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50px"
+                android:layout_height="40px"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10px"
+                android:src="@mipmap/main_tab_find"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10px"
+                android:text="@string/main_find_tab"
+                android:textColor="@color/main_tab_text_color"
+                android:textSize="33px"/>
+
+        </LinearLayout>
+
+        <!-- 消息-->
+        <LinearLayout
+            android:id="@+id/ll_message"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50px"
+                android:layout_height="40px"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10px"
+                android:src="@mipmap/main_tab_message"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10px"
+                android:text="@string/main_message_tab"
+                android:textColor="@color/main_tab_text_color"
+                android:textSize="33px"/>
+
+
+        </LinearLayout>
+
+        <!-- 我的-->
+        <LinearLayout
+            android:id="@+id/ll_mine"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50px"
+                android:layout_height="40px"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10px"
+                android:src="@mipmap/main_tab_mine"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10px"
+                android:text="@string/main_mine_tab"
+                android:textColor="@color/main_tab_text_color"
+                android:textSize="33px"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 首页可拖动相机 -->
+    <com.qks.beautyexchange.ui.view.AutoBackLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.qks.beautyexchange.ui.view.ShadowView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.0"
+            android:background="@color/main_shadow_bg"/>
+
+        <ImageView
+            android:layout_width="185px"
+            android:layout_height="185px"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="111px"
+            android:scaleType="fitXY"
+            android:src="@mipmap/main_camera"
+            app:layout_auto_basewidth="height|width"/>
+
+
+    </com.qks.beautyexchange.ui.view.AutoBackLayout>
+
+</FrameLayout>

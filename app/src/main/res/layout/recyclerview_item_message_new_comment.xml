@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="402px">
+
+    <!-- 头像 -->
+    <ImageView
+        android:layout_width="68px"
+        android:layout_height="68px"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="30px"
+        android:src="@mipmap/test4"/>
+
+    <!-- 用户名 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="115px"
+        android:layout_marginTop="40px"
+        android:textColor="@color/message_new_comment_user_name_color"
+        android:textSize="26px"
+        android:text="Maruko_Le"
+        />
+
+    <!-- desc -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="世上本无事,但除了吃。"
+        android:layout_marginTop="74px"
+        android:layout_marginLeft="115px"
+        android:textSize="22px"
+        android:textColor="@color/black"
+        />
+    
+    <!-- 回复图标 -->
+    <ImageView
+        android:layout_width="24px"
+        android:layout_height="26px"
+        android:layout_marginLeft="640px"
+        android:layout_marginTop="42px"
+        android:src="@mipmap/message_new_comment_comment_icon"
+        />
+
+    <!-- 回复文字 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/message_comment_text"
+        android:layout_marginTop="41px"
+        android:layout_marginLeft="674px"
+        android:textSize="23px"
+        android:textColor="@color/black"
+        />
+
+    <!-- 回复内容 -->
+    <TextView
+        android:layout_marginTop="140px"
+        android:layout_marginLeft="28px"
+        android:textSize="28px"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="亲~我也是武汉的~喜欢这条裤子~已私信你啦啦啦~"/>
+
+
+    <!-- 被回复的商品 -->
+    <ImageView
+        android:layout_width="178px"
+        android:layout_height="178px"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="194px"
+        android:src="@mipmap/test3"/>
+    
+    
+    <!-- 被回复的商品的商品描述 -->
+    <FrameLayout
+        android:layout_width="512px"
+        android:layout_height="178px"
+        android:layout_marginLeft="208px"
+        android:layout_marginTop="195px"
+        android:background="@color/message_new_comment_commodity_desc_bg">
+
+        <!-- 商品描述 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12px"
+            android:layout_marginTop="12px"
+            android:layout_marginRight="12px"
+            android:textColor="@color/black"
+            android:textSize="20px"
+            android:text="前两天买的一套睡衣准备送朋友,朋友穿太大了,拿粗来换积分哒！！！"
+            />
+
+        <!-- 原价背景 -->
+        <ImageView
+            android:layout_width="84px"
+            android:layout_height="30px"
+            android:layout_marginTop="130px"
+            android:layout_marginLeft="12px"
+            android:background="@mipmap/main_item_original_cost"/>
+、
+        <!-- 原价文字 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18px"
+            android:layout_marginTop="135px"
+            android:textSize="17px"
+            android:text="原价¥129"
+            android:textColor="@color/white"/>
+
+        <!-- 积分 -->
+        <com.qks.beautyexchange.ui.view.IntegralView
+            android:layout_width="24px"
+            android:layout_height="24px"
+            android:layout_marginLeft="116px"
+            app:layout_auto_basewidth="height|width"
+            android:layout_marginTop="131px"
+            />
+        <!-- 积分文字 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="积分"
+            android:textColor="@color/main_item_simple_integral_text_bg"
+            android:textSize="19px"
+            android:layout_marginLeft="146px"
+            android:layout_marginTop="134px"/>
+
+
+        <!-- 位置图标 -->
+        
+        <ImageView
+            android:layout_width="101px"
+            android:layout_height="31px"
+            android:layout_marginLeft="394px"
+            android:layout_marginTop="132px"
+            android:src="@mipmap/message_new_comment_city_bg"/>
+
+        <ImageView
+            android:layout_width="19px"
+            android:layout_height="20px"
+            android:layout_marginTop="138px"
+            android:layout_marginLeft="408px"
+            android:src="@mipmap/main_item_city_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="432px"
+            android:layout_marginTop="139px"
+            android:textColor="@color/black"
+            android:textSize="17px"
+            android:text="武汉市"
+            />
+
+    </FrameLayout>
+
+
+    <!-- 分割线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/message_new_comment_cut_off_rule"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="30px"/>
+
+
+
+
+
+
+
+
+</FrameLayout>

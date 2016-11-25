@@ -1,0 +1,11 @@
+<!-- 抽出公共部分,如果只需要实现一个列表,可直接使用该布局 -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+    <com.qks.beautyexchange.ui.view.recyclerview.PullRecyclerView
+        android:id="@id/common_pullRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</merge>

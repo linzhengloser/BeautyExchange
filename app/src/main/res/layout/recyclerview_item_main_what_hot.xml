@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="213px"
+    android:background="@color/main_recycler_view_bg">
+
+    <!-- what hot -->
+
+    <ImageView
+        android:layout_width="156px"
+        android:layout_height="match_parent"
+        android:src="@mipmap/main_item_what_hot_bg"/>
+    <View
+        android:layout_width="156px"
+        android:layout_height="1px"
+        android:background="@color/main_item_what_hot_rule"/>
+    <View
+        android:layout_width="1px"
+        android:layout_height="199px"
+        android:layout_marginLeft="154px"
+        android:background="@color/main_item_what_hot_rule"/>
+    <View
+        android:layout_width="156px"
+        android:layout_height="1px"
+        android:layout_marginTop="199px"
+        android:background="@color/main_item_what_hot_rule"/>
+
+
+    <!-- 右边可滑动区域 -->
+
+
+    <FrameLayout
+        android:layout_width="586px"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="163px"
+        android:background="@color/white">
+
+        <!-- 3条线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/main_item_what_hot_rule"/>
+        <View
+            android:layout_width="1px"
+            android:layout_height="199px"
+            android:background="@color/main_item_what_hot_rule"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="199px"
+            android:background="@color/main_item_what_hot_rule"/>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_item_main_what_hot_horizontal_images"
+            android:layout_width="541px"
+            android:layout_height="173px"
+            android:layout_marginLeft="15px"
+            android:layout_marginTop="15px"
+            android:overScrollMode="never"
+            />
+
+
+    </FrameLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="13px"
+        android:layout_gravity="bottom"
+        android:background="@color/main_recycler_view_bg"
+        />
+
+</FrameLayout>

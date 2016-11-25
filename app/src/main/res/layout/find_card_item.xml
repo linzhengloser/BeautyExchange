@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@drawable/find_card_item_bg"
+    >
+
+    <!--android:layout_width="687px"
+        android:layout_height="780px"
+        android:background="@drawable/find_card_item_bg"-->
+
+    <!-- 用户头像 -->
+    <ImageView
+        android:layout_width="64px"
+        android:layout_height="64px"
+        android:layout_marginLeft="40px"
+        android:layout_marginTop="40px"
+        android:scaleType="fitXY"
+        android:src="@mipmap/test4"
+        app:layout_auto_basewidth="height|width"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="116px"
+        android:layout_marginTop="58px"
+        android:text="Maruko Chan"
+        android:textColor="@color/find_card_item_user_name_text"
+        android:textSize="25px"/>
+
+
+    <!-- 地区 -->
+    <FrameLayout
+        android:layout_width="100px"
+        android:layout_height="32px"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="52px"
+        android:background="@mipmap/main_item_city_bg">
+
+        <ImageView
+            android:layout_width="18px"
+            android:layout_height="21px"
+            android:layout_marginLeft="13px"
+            android:layout_marginTop="6px"
+            android:src="@mipmap/main_item_city_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="37px"
+            android:layout_marginTop="7px"
+            android:text="武汉市"
+            android:textColor="@color/black"
+            android:textSize="17px"/>
+
+    </FrameLayout>
+
+
+    <!-- 主图片 -->
+    <ImageView
+        android:id="@+id/iv_find_card_item_image"
+        android:layout_width="423px"
+        android:layout_height="422px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="138px"
+        android:src="@mipmap/test11"/>
+
+    <!-- 飞机图标 -->
+    <ImageView
+        android:layout_width="35px"
+        android:layout_height="35px"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="139px"
+        android:layout_marginLeft="29px"
+        android:src="@mipmap/main_item_detail_content_name_icon"/>
+
+    <!-- 商品名称 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="136px"
+        android:layout_marginLeft="82px"
+        android:text="白色麻条长裙"
+        android:textColor="@color/black"
+        android:textSize="34px"/>
+
+
+    <!-- 商品描述 -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="94px"
+        android:layout_marginLeft="29px"
+        android:text="购于淘宝,图片是淘宝原图"
+        android:textColor="@color/black"
+        android:textSize="26px"/>
+
+
+    <!-- 原价 -->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|bottom"
+        android:layout_marginBottom="36px"
+        android:layout_marginLeft="28px"
+        android:background="@mipmap/main_item_original_cost"
+        android:padding="8px">
+
+        <TextView
+            android:id="@+id/tv_item_main_simple_original_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="原价 ¥399"
+            android:textColor="@color/white"
+            android:textSize="20px"/>
+    </FrameLayout>
+
+
+    <!-- 积分 -->
+    <com.qks.beautyexchange.ui.view.IntegralView
+        android:id="@+id/tv_item_main_simple_integral"
+        android:layout_width="28px"
+        android:layout_height="28px"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="39px"
+        android:layout_marginLeft="180px"
+        app:layout_auto_basewidth="height|width"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="40px"
+        android:layout_marginLeft="215px"
+        android:text="@string/main_item_integral"
+        android:textColor="@color/main_item_simple_integral_text_bg"
+        android:textSize="24px"/>
+
+    <!-- 发布时间 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="44px"
+        android:layout_marginLeft="519px"
+        android:text="发布时间:20s之前"
+        android:textColor="@color/black"
+        android:textSize="20px"/>
+
+    <ImageView
+        android:layout_width="22px"
+        android:layout_height="21px"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="45px"
+        android:layout_marginLeft="480px"
+        android:src="@mipmap/main_item_detail_clock"/>
+</FrameLayout>

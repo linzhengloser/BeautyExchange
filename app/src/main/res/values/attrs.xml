@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="card">
+        <attr name="yOffsetStep" format="dimension" />
+    </declare-styleable>
+
+    <!-- 公共标题栏 -->
+    <declare-styleable name="common_title_view">
+        <!-- 标题文字 -->
+        <attr name="commonTitleText" format="string" />
+        <!-- 标题文字大小-->
+        <attr name="commonTitleTextSize" format="dimension" />
+        <!-- 标题文字颜色 -->
+        <attr name="commonTitleTextColor" format="color" />
+        <!-- 左边图标显示的图片 -->
+        <attr name="commonTitleLeftImage" format="integer|reference"/>
+        <!-- 是否需要左边图片 -->
+        <attr name="commonTitleIsShowLeftImage" format="boolean"/>
+        <!-- 右边图片显示的图片 -->
+        <attr name="commonTitleRightImage" format="integer|reference"/>
+        <!-- 是否需要显示右边图片 -->
+        <attr name="commonTitleIsShowRightImage" format="boolean"/>
+        <!-- 是否需要显示标题文字 -->
+        <attr name="commonTitleIsShowTitle" format="boolean"/>
+    </declare-styleable>
+
+
+</resources>

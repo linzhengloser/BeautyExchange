@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="95px">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/mine_my_tab_release_text"
+            android:textSize="24px"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/mine_my_tab_buy_text"
+            android:textSize="24px"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/mine_my_tab_sells_text"
+            android:textSize="24px"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/mine_my_tab_collection_text"
+            android:textSize="24px"/>
+
+    </LinearLayout>
+
+    <!-- 分割线 -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="95px"
+        android:background="@color/mine_my_cut_off_rule"/>
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="58px"
+        android:layout_marginLeft="188px"
+        android:layout_marginTop="22px"
+        android:background="@color/mine_my_cut_off_rule"/>
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="58px"
+        android:layout_marginLeft="376px"
+        android:layout_marginTop="22px"
+        android:background="@color/mine_my_cut_off_rule"/>
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="58px"
+        android:layout_marginLeft="563px"
+        android:layout_marginTop="22px"
+        android:background="@color/mine_my_cut_off_rule"/>
+
+
+    <!-- 没有数据的时候要显示的东西 -->
+    <FrameLayout
+        android:layout_width="538px"
+        android:layout_height="303px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="176px"
+        android:background="@drawable/mine_store_item_detail_number_bg">
+
+        <!-- 友好提示 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50px"
+            android:lineSpacingExtra="5px"
+            android:text="@string/mine_my_tab_no_data_text"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="36px"/>
+
+        <!-- 等会再去 -->
+        <TextView
+            android:layout_width="192px"
+            android:layout_height="58px"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="27px"
+            android:layout_marginLeft="30px"
+            android:background="@drawable/mine_store_item_detail_number_bg"
+            android:gravity="center"
+            android:text="@string/mine_my_tab_wait_go_text"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="20px"/>
+
+        <!-- 现在就去 -->
+
+        <TextView
+            android:layout_width="192px"
+            android:layout_height="58px"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="27px"
+            android:layout_marginLeft="308px"
+            android:background="@drawable/mine_store_item_detail_number_bg"
+            android:gravity="center"
+            android:text="@string/mine_my_tab_now_go_text"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="20px"/>
+    </FrameLayout>
+
+
+</FrameLayout>

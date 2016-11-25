@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="569px">
+
+    <!-- 头像 -->
+    <ImageView
+        android:id="@+id/iv_item_main_simple_head_image"
+        android:layout_width="62px"
+        android:layout_height="62px"
+        android:layout_marginLeft="36px"
+        android:layout_marginTop="20px"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/test4" />
+
+
+    <!-- 用户名 -->
+
+    <TextView
+        android:id="@+id/tv_item_main_simple_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="118px"
+        android:layout_marginTop="40px"
+        android:text="Miki HonoKa_"
+        android:textColor="@color/main_item_simple_name"
+        android:textSize="26px" />
+
+
+    <!-- 地区 -->
+
+    <FrameLayout
+        android:layout_width="100px"
+        android:layout_height="32px"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:layout_marginRight="28px"
+        android:layout_marginTop="38px"
+        android:background="@mipmap/main_item_city_bg">
+        
+        <ImageView
+            android:layout_width="18px"
+            android:layout_height="21px"
+            android:layout_marginLeft="13px"
+            android:layout_marginTop="6px"
+            android:src="@mipmap/main_item_city_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="37px"
+            android:layout_marginTop="7px"
+            android:textSize="17px"
+            android:textColor="@color/black"
+            android:text="武汉市"/>
+
+    </FrameLayout>
+
+
+    <!-- 商品描述 -->
+
+    <TextView
+        android:id="@+id/tv_item_main_simple_merchandise_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36px"
+        android:layout_marginRight="36px"
+        android:layout_marginTop="108px"
+        android:maxLines="2"
+        android:text="短裤是亚麻材质的,特别的舒适透气,夏天穿上它舒适无感~购于无印良品,吊牌还在,短裤是亚麻材质的,特别的舒适透气,夏天穿上它舒适无感~购于无印良品,吊牌还在,短裤是亚麻材质的,特别的舒适透气,夏天穿上它舒适无感~购于无印良品,吊牌还在"
+        android:textSize="24px" />
+
+
+
+    <!-- 可横这滑动的RecyclerView -->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_item_main_simple_horizontal_images"
+        android:layout_width="690px"
+        android:layout_height="180px"
+        android:layout_marginLeft="36px"
+        android:layout_marginTop="200px"
+        android:overScrollMode="never"
+        android:clickable="false"
+        />
+
+
+    <!-- 原价 -->
+    <RelativeLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="33px"
+        android:layout_marginTop="404px"
+        android:background="@mipmap/main_item_original_cost"
+        android:padding="8px">
+
+        <TextView
+            android:id="@+id/tv_item_main_simple_original_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="原价 ¥399"
+            android:textColor="@color/white"
+            android:textSize="20px" />
+    </RelativeLayout>
+
+
+    <!-- 积分 -->
+    <com.qks.beautyexchange.ui.view.IntegralView
+        android:id="@+id/tv_item_main_simple_integral"
+        android:layout_width="32px"
+        android:layout_height="32px"
+        android:layout_marginLeft="170px"
+        android:layout_marginTop="408px"
+        android:textColor="@color/black"
+        app:layout_auto_basewidth="height|width"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="206px"
+        android:layout_marginTop="409px"
+        android:text="@string/main_item_integral"
+        android:textColor="@color/main_item_simple_integral_text_bg"
+        android:textSize="24px" />
+
+
+    <!-- 发布时间 -->
+    <TextView
+        android:id="@+id/tv_item_main_simple_post_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="650px"
+        android:layout_marginTop="416px"
+        android:text="2秒前"
+        android:textSize="24px" />
+
+    <!-- 分割线 -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginLeft="34px"
+        android:layout_marginTop="475px"
+        android:background="@color/main_item_simple_cut_off_rule" />
+
+
+    <!-- 爱心 -->
+    <ImageView
+        android:layout_width="31px"
+        android:layout_height="28px"
+        android:layout_marginLeft="58px"
+        android:layout_marginTop="502px"
+        android:src="@mipmap/main_item_love" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="96px"
+        android:layout_marginTop="504px"
+        android:text="50"
+        android:textColor="@color/black"
+        android:textSize="22px" />
+
+    <!-- 回复个数 -->
+    <ImageView
+        android:layout_width="28px"
+        android:layout_height="31px"
+        android:layout_marginLeft="342px"
+        android:layout_marginTop="503px"
+        android:src="@mipmap/main_item_comment" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="384px"
+        android:layout_marginTop="504px"
+        android:text="50"
+        android:textColor="@color/black"
+        android:textSize="22px" />
+
+
+    <!-- 分享 -->
+    <ImageView
+        android:layout_width="28px"
+        android:layout_height="30px"
+        android:layout_marginLeft="658px"
+        android:layout_marginTop="502px"
+        android:src="@mipmap/main_item_share" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="384px"
+        android:layout_marginTop="504px"
+        android:text="50"
+        android:textColor="@color/black"
+        android:textSize="22px" />
+
+    <!-- 分割线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="13px"
+        android:layout_gravity="bottom"
+        android:background="@color/main_recycler_view_bg" />
+
+
+</FrameLayout>

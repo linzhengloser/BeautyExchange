@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:fitsSystemWindows="true">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_main_item_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="50px"
+        android:layout_height="107px"
+        android:scaleType="fitXY"
+        android:src="@mipmap/common_back_red"/>
+
+</FrameLayout>

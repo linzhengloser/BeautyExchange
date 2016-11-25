@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/find_bg">
+
+
+    <!-- 高仿探探 -->
+    <com.qks.beautyexchange.ui.view.CardSlidePanel
+        android:id="@+id/csp_search_card_slide_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:yOffsetStep="20dp">
+
+        <com.qks.beautyexchange.ui.view.CardItemView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="260px"
+            android:paddingLeft="24px"
+            android:paddingRight="24px"
+            android:paddingTop="260px"
+            />
+
+        <com.qks.beautyexchange.ui.view.CardItemView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="260px"
+            android:paddingLeft="24px"
+            android:paddingRight="24px"
+            android:paddingTop="260px"
+            />
+
+        <com.qks.beautyexchange.ui.view.CardItemView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="260px"
+            android:paddingLeft="24px"
+            android:paddingRight="24px"
+            android:paddingTop="260px"
+            />
+
+        <com.qks.beautyexchange.ui.view.CardItemView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="260px"
+            android:paddingLeft="24px"
+            android:paddingRight="24px"
+            android:paddingTop="260px"
+            />
+
+    </com.qks.beautyexchange.ui.view.CardSlidePanel>
+
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="50px"
+        android:layout_height="112px"
+        android:layout_marginTop="10px"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:src="@mipmap/common_back_red"
+        />
+
+</FrameLayout>

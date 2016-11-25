@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/white"
+             android:fitsSystemWindows="false">
+    <!-- 背景 -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="356px"
+        android:scaleType="fitXY"
+        android:src="@mipmap/test5"/>
+
+    <!-- 用户头像 -->
+    <ImageView
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:layout_marginLeft="35px"
+        android:layout_marginTop="168px"
+        android:src="@mipmap/test6"/>
+
+    <!--  用户名称 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="162px"
+        android:layout_marginTop="182px"
+        android:text="Maruko_Le"
+        android:textColor="@color/white"
+        android:textSize="36px"/>
+
+    <!-- 用户签名 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="162px"
+        android:layout_marginTop="230px"
+        android:text="Maruko_Le"
+        android:textColor="@color/white"
+        android:textSize="28px"/>
+
+    <!-- 用户积分 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="65px"
+        android:layout_marginTop="308px"
+        android:text="当前:  35积分"
+        android:textColor="@color/white"
+        android:textSize="27px"/>
+
+
+    <!-- 设置按钮 -->
+    <ImageView
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:layout_marginLeft="665px"
+        android:layout_marginTop="91px"
+        android:src="@mipmap/mine_setting"/>
+
+    <!-- 我的选项卡 -->
+    <ImageView
+        android:id="@+id/iv_mine_my_tab"
+        android:layout_width="140px"
+        android:layout_height="64px"
+        android:layout_marginLeft="479px"
+        android:layout_marginTop="293px"
+        android:scaleType="fitXY"
+        android:src="@mipmap/mine_tab_selected"/>
+
+    <!-- 我的选项卡的文字 -->
+    <TextView
+        android:id="@+id/tv_mine_my_tab_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="522px"
+        android:layout_marginTop="315px"
+        android:text="@string/mine_my_tab_text"
+        android:textColor="@color/black"
+        android:textSize="24px"/>
+
+
+    <!--商店选项卡-->
+    <ImageView
+        android:id="@+id/iv_mine_store_tab"
+        android:layout_width="140px"
+        android:layout_height="64px"
+        android:layout_marginLeft="577px"
+        android:layout_marginTop="293px"
+        android:scaleType="fitXY"
+        android:src="@mipmap/mine_tab_store_unselected"/>
+
+    <!--商店选项卡文字-->
+
+    <TextView
+        android:id="@+id/tv_mine_store_tab_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="624px"
+        android:layout_marginTop="315px"
+        android:text="@string/mine_store_tab_text"
+        android:textColor="@color/white"
+        android:textSize="24px"/>
+
+    <!-- 底部FrameLayout -->
+
+    <FrameLayout
+        android:id="@+id/fl_mine_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="356px"/>
+
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="50px"
+        android:layout_height="112px"
+        android:layout_marginTop="42px"
+        android:scaleType="fitXY"
+        android:src="@mipmap/common_back_red"
+        />
+
+</FrameLayout>

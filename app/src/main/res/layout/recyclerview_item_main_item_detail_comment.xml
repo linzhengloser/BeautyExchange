@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="186px"
+    android:orientation="vertical">
+    
+
+    <!-- 回复用户的头像 -->
+    <ImageView
+        android:layout_width="78px"
+        android:layout_height="78px"
+        android:layout_marginTop="23px"
+        android:layout_marginLeft="43px"
+        android:src="@mipmap/test6"
+        />
+
+
+    <!-- 用户名称 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28px"
+        android:layout_marginLeft="128px"
+        android:textSize="28px"
+        android:textColor="@color/main_item_detail_comment_user_name_text"
+        android:text="秦昊"/>
+
+
+    <!-- 用户回复内容 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="128px"
+        android:layout_marginTop="67px"
+        android:layout_marginRight="38px"
+        android:textSize="26px"
+        android:textColor="@color/black"
+        android:text="来我家看看咯~急缺积分呢,所有东西都卖的超低积分的!"/>
+
+
+
+    <!-- 回复时间 -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20s前"
+        android:textSize="22px"
+        android:layout_marginLeft="652px"
+        android:layout_marginTop="148px"
+        android:textColor="@color/black"
+        />
+
+
+    <!-- 分割线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/main_item_detail_comment_cut_off_rule"
+        android:layout_marginLeft="128px"
+        android:layout_marginTop="185px"/>
+
+
+
+</FrameLayout>

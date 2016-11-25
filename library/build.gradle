@@ -1,0 +1,42 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar','*.so'])
+    testCompile rootProject.ext.libJunitVersion
+    compile rootProject.ext.libSupportVersion //兼容包
+    compile rootProject.ext.libCardviewVersion //CardView
+    compile rootProject.ext.libButterknifeVersion //ButterKnife
+    compile rootProject.ext.libAndroidAutoLayoutVersion //AndroidAutoLayout
+    compile rootProject.ext.libDesignVersion //Design
+    compile rootProject.ext.libSystemBarTintVersion //状态栏
+    compile rootProject.ext.libEventBusVersion //EventBus
+    compile rootProject.ext.libLoggerVersion //Logger
+    compile rootProject.ext.libFlowLayoutVersion //FlowLayout
+    //网络相关
+    compile rootProject.ext.libRxJavaVersion //RxJava
+    compile rootProject.ext.libRxAndroidVersion //RxAndroid
+    compile rootProject.ext.libGsonVersion //Gson
+    compile rootProject.ext.libRetrofitConverterGsonVersion //Retrofit 集成 Gson
+    compile rootProject.ext.libRetrofitAdapterRxJava //Retrofit 集成 RxJava
+    compile rootProject.ext.libRetrofitVersion //Retrofit
+    compile rootProject.ext.libOkhttp;//OkHttp
+    compile rootProject.ext.libOkHttpLoggingInterceptor //OkHttp的日志拦截器
+}

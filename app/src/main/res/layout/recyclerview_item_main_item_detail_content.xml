@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="1242px">
+
+
+    <!-- 顶部边框 -->
+    <!-- 上 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="74px"
+        android:background="@color/main_item_detail_content_cut_off_rule" />
+    <!-- 左 -->
+    <View
+        android:layout_width="1px"
+        android:layout_height="778px"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="74px"
+        android:background="@color/main_item_detail_content_cut_off_rule" />
+    <!-- 右 -->
+    <View
+        android:layout_width="1px"
+        android:layout_height="778px"
+        android:layout_marginLeft="720px"
+        android:layout_marginTop="74px"
+        android:background="@color/main_item_detail_content_cut_off_rule" />
+    <!-- 下 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="851px"
+        android:background="@color/main_item_detail_content_cut_off_rule" />
+
+    <!-- ViewPager -->
+    <android.support.v4.view.ViewPager
+        android:layout_width="520px"
+        android:layout_height="518px"
+        android:layout_marginLeft="116px"
+        android:layout_marginTop="94px"></android.support.v4.view.ViewPager>
+
+
+    <ImageView
+        android:layout_width="35px"
+        android:layout_height="35px"
+        android:layout_marginLeft="66px"
+        android:layout_marginTop="692px"
+        android:src="@mipmap/main_item_detail_content_name_icon" />
+    <!-- 商品名称 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="117px"
+        android:layout_marginTop="695px"
+        android:text="日式zakka收纳盒三个组"
+        android:textColor="@color/black"
+        android:textSize="31px" />
+
+    <!-- 浏览次数 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="117px"
+        android:layout_marginTop="750px"
+        android:text="300次浏览"
+        android:textColor="@color/black"
+        android:textSize="21px" />
+
+    <!-- 位置信息 -->
+
+    <FrameLayout
+        android:layout_width="100px"
+        android:layout_height="32px"
+        android:layout_marginLeft="75px"
+        android:layout_marginTop="796px"
+        android:background="@mipmap/main_item_city_bg">
+
+        <ImageView
+            android:layout_width="18px"
+            android:layout_height="21px"
+            android:layout_marginLeft="13px"
+            android:layout_marginTop="6px"
+            android:src="@mipmap/main_item_city_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="37px"
+            android:layout_marginTop="7px"
+            android:text="武汉市"
+            android:textColor="@color/black"
+            android:textSize="17px" />
+
+    </FrameLayout>
+
+    <!-- 原价 -->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="62px"
+        android:layout_marginTop="690px"
+        android:background="@mipmap/main_item_original_cost"
+        android:padding="8px">
+
+        <TextView
+            android:id="@+id/tv_item_main_simple_original_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="原价 ¥399"
+            android:textColor="@color/white"
+            android:textSize="20px" />
+    </FrameLayout>
+
+    <!-- 积分 -->
+    <com.qks.beautyexchange.ui.view.IntegralView
+        android:id="@+id/tv_item_main_simple_integral"
+        android:layout_width="28px"
+        android:layout_height="28px"
+        android:layout_marginLeft="212px"
+        android:layout_marginTop="798px"
+        app:layout_auto_basewidth="height|width" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="247px"
+        android:layout_marginTop="800px"
+        android:text="@string/main_item_integral"
+        android:textColor="@color/main_item_simple_integral_text_bg"
+        android:textSize="24px" />
+
+
+    <!-- 发布时间 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="545px"
+        android:layout_marginTop="800px"
+        android:text="发布时间:20s之前"
+        android:textColor="@color/black"
+        android:textSize="20px" />
+
+    <ImageView
+        android:layout_width="22px"
+        android:layout_height="21px"
+        android:layout_marginLeft="505px"
+        android:layout_marginTop="800px"
+        android:src="@mipmap/main_item_detail_clock" />
+
+
+    <!-- 卖家头像 -->
+    <ImageView
+        android:layout_width="62px"
+        android:layout_height="62px"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="876px"
+        android:src="@mipmap/test6" />
+
+    <!-- 卖家名称 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="116px"
+        android:layout_marginTop="892px"
+        android:text="Iron Man"
+        android:textColor="@color/black"
+        android:textSize="28px" />
+
+    <!-- 关注 -->
+    <TextView
+        android:layout_width="87px"
+        android:layout_height="38px"
+        android:layout_marginLeft="634px"
+        android:layout_marginTop="884px"
+        android:background="@color/main_item_detail_content_collection_bg"
+        android:gravity="center"
+        android:text="关注"
+        android:textSize="22px" />
+
+    <!-- 商品描述 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="957px"
+        android:background="@color/main_item_detail_content_collection_bg">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="23px"
+            android:lineSpacingExtra="5px"
+            android:text="没用过呢,喜欢的请与我联系哦~两个月钱购于一家淘宝,可惜和家里装修风格不搭,只能转让了QwQ"
+            android:textSize="24px" />
+
+    </FrameLayout>
+
+    <!-- 爱心 回复 和分享 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="72px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="1170px"
+        android:background="@color/main_item_detail_content_collection_bg">
+        <!-- 爱心 -->
+        <ImageView
+            android:layout_width="31px"
+            android:layout_height="31px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="29px"
+            android:src="@mipmap/main_item_love" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="68px"
+            android:text="42"
+            android:textColor="@color/black"
+            android:textSize="22px" />
+        <!-- 回复 -->
+        <ImageView
+            android:layout_width="31px"
+            android:layout_height="31px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="315px"
+            android:src="@mipmap/main_item_comment" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="357px"
+            android:text="2333"
+            android:textColor="@color/black"
+            android:textSize="22px" />
+
+        <!-- 分享 -->
+        <ImageView
+            android:layout_width="31px"
+            android:layout_height="31px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="626px"
+            android:src="@mipmap/main_item_share" />
+
+
+    </FrameLayout>
+
+
+</FrameLayout>

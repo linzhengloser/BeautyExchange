@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:fitsSystemWindows="true"
+             android:orientation="vertical">
+
+
+    <!-- 顶部标题栏 -->
+
+    <com.qks.beautyexchange.ui.view.CommonTitleView
+        android:layout_width="match_parent"
+        android:layout_height="110px"
+        android:background="?attr/colorPrimary"
+        app:commonTitleIsShowLeftImage="false"
+        app:commonTitleIsShowRightImage="false"
+        app:commonTitleText="@string/message_title"
+        app:commonTitleTextColor="@color/white"
+        />
+
+
+    <!--<FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="110px"
+        android:background="?attr/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="40px"
+            android:textColor="@color/white"
+            android:text="@string/message_title"/>
+    </FrameLayout>-->
+
+
+    <!-- 分割线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="110px"
+        android:background="@color/white"/>
+
+    <!-- ViewPager指示器 -->
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tl_message_tab"
+        android:layout_width="match_parent"
+        android:layout_height="79px"
+        android:layout_marginTop="112px"
+        android:background="@color/colorPrimary"
+        app:tabIndicatorColor="@color/white"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/white"
+
+        />
+
+    <!-- 明暗交接线 -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="191px"
+        android:background="@color/white"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="192px"
+        android:background="@color/message_tab_layout_rule"/>
+
+
+    <!-- VIewPager -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_message_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="194px"/>
+
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="50px"
+        android:layout_height="112px"
+        android:layout_marginTop="26px"
+        android:scaleType="fitXY"
+        android:src="@mipmap/common_back_white"
+        />
+
+</FrameLayout>

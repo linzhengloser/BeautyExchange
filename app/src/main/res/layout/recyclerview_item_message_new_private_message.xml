@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="229px"
+    >
+    
+    <!-- 用户头像 -->
+    
+    <ImageView
+        android:layout_width="70px"
+        android:layout_height="70px"
+        android:src="@mipmap/test4"
+        android:layout_marginLeft="29px"
+        android:layout_marginTop="34px"/>
+
+    <!-- 用户名称 -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="116px"
+        android:layout_marginTop="40px"
+        android:textSize="30px"
+        android:textColor="@color/message_new_private_message_user_name_color"
+        android:text="Loser"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22px"
+        android:layout_marginTop="79px"
+        android:layout_marginLeft="116px"
+        android:text="世上本无事,除了吃"
+        android:textColor="@color/black"/>
+
+
+    <!-- 回复图标 -->
+    <ImageView
+        android:layout_width="23px"
+        android:layout_height="24px"
+        android:layout_marginLeft="642px"
+        android:layout_marginTop="42px"
+        android:src="@mipmap/message_new_comment_comment_icon"
+        />
+
+    <!-- 回复文字 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39px"
+        android:layout_marginLeft="673px"
+        android:textSize="23px"
+        android:text="@string/message_private_message_comment_text"/>
+
+    <!-- 私信内容 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="142px"
+        android:text="亲~我好喜欢这条裤子~能聊聊具体尺码吗(· ·)"/>
+
+    <!-- 分割线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="30px"
+        android:background="@color/message_new_private_message_cut_off_rule"/>
+
+</FrameLayout>

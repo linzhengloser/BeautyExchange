@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FB8D8C</color>
+    <color name="colorPrimaryDark">#FB8D8C</color>
+    <color name="colorAccent">#FB8D8C</color>
+
+    <!-- 公共的 -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- 首页-->
+    <color name="main_bottom_navigation_menu_bg">#FFFFFF</color>
+    <color name="main_top_cut_off_rule">#F28483</color>
+    <color name="main_tab_text_color">#B13938</color>
+    <color name="main_item_simple_name">#10A192</color>
+    <color name="main_item_simple_price_bg">#19C6B3</color>
+    <color name="main_item_simple_integral_number_bg">#F4B833</color>
+    <color name="main_item_simple_integral_text_bg">#C6922C</color>
+    <color name="main_item_simple_cut_off_rule">#E7E7E7</color>
+    <color name="main_item_what_hot_rule">#E9CBCB</color>
+    <color name="main_recycler_view_bg">#E3E1E2</color>
+    <color name="main_bottom_navigation_menu_cut_off_rule">#FCA1A0</color>
+    <color name="main_shadow_bg">#cc000000</color>
+
+
+    <!-- 消息界面 -->
+    <!-- 新关注 -->
+    <color name="message_tab_layout_rule">#E2E2E2</color>
+    <color name="message_new_attention_user_name_color">#C3413F</color>
+    <color name="message_new_attention_cut_off_rule">#E7E7E7</color>
+
+    <!-- 新回复 -->
+    <color name="message_new_comment_user_name_color">#C3413F</color>
+    <color name="message_new_comment_commodity_desc_bg">#F5F3F4</color>
+    <color name="message_new_comment_cut_off_rule">#E7E7E7</color>
+
+    <!--新私信-->
+    <color name="message_new_private_message_user_name_color">#C3413F</color>
+    <color name="message_new_private_message_cut_off_rule">#E7E7E7</color>
+
+    <!-- 我的 -->
+    <color name="mine_my_cut_off_rule">#E6E6E6</color>
+    <!-- 我的_商店_详情-->
+    <color name="mine_store_item_detail_number_bg">#CE9DA3</color>
+    <color name="mine_store_item_detail_desc_bg">#F1F1F1</color>
+    <color name="mine_store_item_detail_integral_text_bg">#A28E6B</color>
+    <color name="mine_store_item_detail_cut_off_rule">#9C9C9C</color>
+    <color name="mine_store_item_detail_cut_off_rule_bg">#E2E2E2</color>
+    <!-- 首页内页 -->
+    <color name="main_item_detail_comment_user_name_text">#12A094</color>
+    <color name="main_item_detail_comment_cut_off_rule">#E7E7E7</color>
+    <color name="main_item_detail_content_cut_off_rule">#B8B8B8</color>
+    <color name="main_item_detail_content_collection_bg">#E7E7E7</color>
+
+    <!-- 我的商城,商品详情 -->
+    <color name="mine_store_commodity_detail_header_cut_off_rule">#B6B6B6</color>
+    <color name="mine_store_commodity_detail_header_type">#E7E7E7</color>
+
+    <!-- 发现界面 -->
+    <color name="find_card_item_user_name_text">#2E4B39</color>
+    <color name="find_bg">#DDDDDD</color>
+
+</resources>
