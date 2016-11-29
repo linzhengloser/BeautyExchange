@@ -51,9 +51,9 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <!--测试Activity-->
-        <activity android:name=".api.common.TestActivity">
-        </activity>
+        <!--&lt;!&ndash;测试Activity&ndash;&gt;-->
+        <!--<activity android:name=".api.common.TestActivity">-->
+        <!--</activity>-->
     </application>
 
 </manifest>
