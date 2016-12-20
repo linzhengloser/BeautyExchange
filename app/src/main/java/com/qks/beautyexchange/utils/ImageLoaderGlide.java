@@ -10,7 +10,7 @@ import com.bumptech.glide.Glide;
  * 实现GLide
  *
  */
-public class ImageLoaderGlide extends ImageLoaderWrapper {
+public class ImageLoaderGlide extends ImageLoaderLogic {
 
     @Override
     void commonLoadImage(Context context, ImageView imageView, String imageUrl, ImageLoaderOptions options) {

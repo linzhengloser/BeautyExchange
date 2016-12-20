@@ -10,7 +10,7 @@ import android.widget.ImageView;
  * 功能:
  */
 
-public class ImageLoaderPicasso extends ImageLoaderWrapper {
+public class ImageLoaderPicasso extends ImageLoaderLogic {
 
     @Override
     void commonLoadImage(Context context, ImageView imageView, String imageUrl, ImageLoaderOptions options) {

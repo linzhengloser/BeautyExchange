@@ -31,6 +31,8 @@ import com.qks.beautyexchange.R;
  * 为了防止内存泄漏,单独放在一个进程中
  * 使用静态方法openHtml 打开此Activity
  * 此Activity对HTML的部分问题已经做了处理
+ * ----2016/12/20
+ * 经过测试,如果使用独立进程,Application 中 的onCreate方法会执行两次,所以最好在onCreate方法中做判断,以免重复初始化.
  * Created by admin on 2016/4/13.
  */
 public class BaseHtmlActivity extends AppCompatActivity{
@@ -160,7 +162,8 @@ public class BaseHtmlActivity extends AppCompatActivity{
             mWebView = null;
         }
         super.onDestroy();
-        System.exit(0);
+        //经过测试 如果使用关闭之后就杀掉进程的方式 那么这样 启动速度太慢了,暂且不杀进程 不知道有没有问题
+//        System.exit(0);
     }
 
     WebViewClient webViewClident = new WebViewClient(){

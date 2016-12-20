@@ -60,5 +60,4 @@ public interface ImageLoader {
         public int loadThumbnail;
     }
 
-
 }
