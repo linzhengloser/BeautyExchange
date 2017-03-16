@@ -1,6 +1,5 @@
 package com.qks.beautyexchange.utils;
 
-import android.content.Context;
 import android.net.Uri;
 import android.widget.ImageView;
 
@@ -11,37 +10,28 @@ public interface ImageLoader {
 
     /**
      * 加载网络图片
+     *
      * @param imageView 要显示图片的ImageView
-     * @param imageUrl 图片的URL
-     * @param options 加载图片的相关参数
+     * @param imageUrl  图片的URL
+     * @param options   加载图片的相关参数
      */
-    void loadImage(Context context, ImageView imageView, String imageUrl, ImageLoaderOptions options);
+    void loadImage(ImageView imageView, String imageUrl, ImageLoaderOptions options);
 
 
     /**
      * 使用默认方式加载网络图片
-     * @param context
-     * @param imageView
-     * @param imageUrl
      */
-    void loadImage(Context context, ImageView imageView, String imageUrl);
+    void loadImage(ImageView imageView, String imageUrl);
 
     /**
      * 通过Uri加载图片
-     * @param context
-     * @param imageView
-     * @param imageUri
-     * @param options
      */
-    void loadImage(Context context, ImageView imageView, Uri imageUri, ImageLoaderOptions options);
+    void loadImage(ImageView imageView, Uri imageUri, ImageLoaderOptions options);
 
     /**
      * 使用默认的方式加载Uri图片
-     * @param context
-     * @param imageView
-     * @param imageUri
      */
-    void loadImage(Context context, ImageView imageView, Uri imageUri);
+    void loadImage(ImageView imageView, Uri imageUri);
 
     class ImageLoaderOptions {
         /**

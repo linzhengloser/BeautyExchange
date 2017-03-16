@@ -42,7 +42,7 @@
 #指定混淆采用的算法
 -optimizations !code/simplification/cast,!field/*,!class/merging/*
 #不混淆注解
--keepattributes *Annotation*,InnerClasses、
+-keepattributes *Annotation*,InnerClasses
 #不混淆泛型
 -keepattributes Signature
 #抛出异常时保留代码行数
@@ -115,3 +115,56 @@
 }
 #----------------------------------------------------------------------------
 #---------------------------------------------------------------------------------------------------
+
+#-ButterKnife 7.0
+ -keep class butterknife.** { *; }
+ -dontwarn butterknife.internal.**
+ -keep class **$$ViewBinder { *; }
+ -keepclasseswithmembernames class * {
+  @butterknife.* <fields>;
+ }
+ -keepclasseswithmembernames class * {
+ @butterknife.* <methods>;
+ }
+
+ # Okio
+ -dontwarn com.squareup.**
+ -dontwarn okio.**
+ -keep public class org.codehaus.* { *; }
+ -keep public class java.nio.* { *; }
+
+ # Retrolambda
+ -dontwarn java.lang.invoke.*
+
+ ## okhttp
+ -dontwarn com.squareup.okhttp.**
+ -keep class com.squareup.okhttp.{*;}
+
+
+# RxJava
+-dontwarn sun.misc.**
+
+-keepclassmembers class rx.internal.util.unsafe.*ArrayQueue*Field* {
+   long producerIndex;
+   long consumerIndex;
+}
+
+-keepclassmembers class rx.internal.util.unsafe.BaseLinkedQueueProducerNodeRef {
+    rx.internal.util.atomic.LinkedQueueNode producerNode;
+}
+
+-keepclassmembers class rx.internal.util.unsafe.BaseLinkedQueueConsumerNodeRef {
+    rx.internal.util.atomic.LinkedQueueNode consumerNode;
+}
+
+# Retrofit 2.X
+## https://square.github.io/retrofit/ ##
+
+-dontwarn retrofit2.**
+-keep class retrofit2.** { *; }
+-keepattributes Signature
+-keepattributes Exceptions
+
+-keepclasseswithmembers class * {
+    @retrofit2.http.* <methods>;
+}

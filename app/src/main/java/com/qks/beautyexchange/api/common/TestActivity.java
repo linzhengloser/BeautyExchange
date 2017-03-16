@@ -1,37 +1,65 @@
 package com.qks.beautyexchange.api.common;
 
 import android.os.Bundle;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.qks.beautyexchange.R;
-import com.qks.beautyexchange.api.service.ServiceUtils;
-import com.qks.beautyexchange.api.service.UserService;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
 /**
  * Created by admin on 2016/3/23.
  */
 public class TestActivity extends AppCompatActivity {
 
+    @Bind(R.id.viewpager)
+    ViewPager viewpager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
+        ButterKnife.bind(this);
+//        ServiceUtils.extractData(RetrofitTools.getInstance().createApiService(UserService.class).login("","",""))
+//        .subscribe(user -> {
+//            System.out.println(user.getUser_id());
+//            System.out.println(user.getWeixin_uid());
+//        },throwable -> {
+//            System.out.println(throwable.getCause());
+//            System.out.println(throwable.getMessage());
+//        });
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
-        setSupportActionBar(toolbar);
+        viewpager.setAdapter(new PagerAdapter() {
+            @Override
+            public int getCount() {
+                return 4;
+            }
 
+            @Override
+            public boolean isViewFromObject(View view, Object object) {
+                return view == object;
+            }
 
-        ServiceUtils.extractData(RetrofitTools.getInstance().createApiService(UserService.class).login("","",""))
-        .subscribe(user -> {
-            System.out.println(user.getUser_id());
-            System.out.println(user.getWeixin_uid());
-        },throwable -> {
-            System.out.println(throwable.getCause());
-            System.out.println(throwable.getMessage());
+            @Override
+            public Object instantiateItem(ViewGroup container, int position) {
+                ImageView imageView = new ImageView(container.getContext());
+                imageView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+                imageView.setImageResource(R.mipmap.ic_launcher);
+                container.addView(imageView);
+                return imageView;
+            }
+
+            @Override
+            public void destroyItem(ViewGroup container, int position, Object object) {
+                container.removeView((View) object);
+            }
         });
-
 
 
     }

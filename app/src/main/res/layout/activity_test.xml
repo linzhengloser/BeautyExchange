@@ -12,22 +12,13 @@
     </android.support.v7.widget.Toolbar>
 
 
-    <com.qks.beautyexchange.ui.view.CouponDisplayView
-        android:layout_width="match_parent"
-        android:layout_height="120dip"
-        android:background="#00C0D4"
-        android:orientation="horizontal"
-        android:layout_marginTop="?attr/actionBarSize"
-        android:padding="20dip">
+
+    <com.qks.beautyexchange.ui.view.NoScrollViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
 
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@mipmap/ic_launcher"/>
-
-
-    </com.qks.beautyexchange.ui.view.CouponDisplayView>
 
 
 </FrameLayout>

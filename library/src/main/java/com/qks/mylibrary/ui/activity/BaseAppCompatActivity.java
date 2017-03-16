@@ -41,7 +41,7 @@ public abstract class BaseAppCompatActivity extends AutoLayoutActivity {
 	protected Context mContext;
 	
 	/**
-	 *
+	 * 变化View帮助类
 	 */
 	private VaryViewHelperController mVaryViewHelperController;
 
@@ -66,9 +66,11 @@ public abstract class BaseAppCompatActivity extends AutoLayoutActivity {
 		//隐藏SmartBar:SmarBar 是魅族手机特有的,但是在魅族最新出来的手机里面取消了SmartBar
 		SmartBarUtils.hide(getWindow().getDecorView());
 
+		//设置透明状态栏
 		setTranslucentStatus(isApplyStatusBarTranslucency());
 
 		mContext = this;
+		//设置Log 的TAG
 		TAG_LOG  = getClass().getSimpleName();
 		BaseAppManager.getInstance().add(this);
 
@@ -259,7 +261,7 @@ public abstract class BaseAppCompatActivity extends AutoLayoutActivity {
     }
 	
 	/**
-	 * �η������ܸ�EventBus�й�
+	 * 用于接收EventBus的Event
 	 * @param eventCenter
 	 */
 	protected abstract void onEventComming(EventCenter<?> eventCenter);
@@ -271,7 +273,7 @@ public abstract class BaseAppCompatActivity extends AutoLayoutActivity {
 	protected abstract void getBundleExtras(Bundle extras);
 	
 	/**
-	 * �Ƿ���Ҫ��EventBus
+	 * 是否绑定EventBus
 	 * @return
 	 */
 	protected abstract boolean isBindEventBusHere();
