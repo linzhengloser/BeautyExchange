@@ -18,7 +18,7 @@ public abstract class ImageLoaderLogic implements ImageLoader{
     /**
      * 默认Options
      */
-    private static ImageLoader.ImageLoaderOptions defaultOptions;
+    protected static ImageLoader.ImageLoaderOptions defaultOptions;
 
     static {
         defaultOptions = new ImageLoaderOptions();
@@ -33,13 +33,13 @@ public abstract class ImageLoaderLogic implements ImageLoader{
 
     @Override
     public void loadImage(ImageView imageView, Uri imageUri, ImageLoaderOptions options) {
-        options = options == null ? defaultOptions : options;
 
         if (!Constant.App.IS_WIFI_LOAD_IMAGE) {
             imageView.setImageResource(options.loadingResId);
             return;
         }
-        commonLoadImage(imageView.getContext(),imageView,imageUri,options);
+
+        commonLoadImage(imageView.getContext(),imageView,imageUri,getImageLoaderOptions(options));
     }
 
     @Override
@@ -49,14 +49,13 @@ public abstract class ImageLoaderLogic implements ImageLoader{
 
     @Override
     public void loadImage(ImageView imageView, String imageUrl, ImageLoaderOptions options) {
-        options = options == null ? defaultOptions : options;
 
         if (!Constant.App.IS_WIFI_LOAD_IMAGE) {
             imageView.setImageResource(options.loadingResId);
             return;
         }
 
-        commonLoadImage(imageView.getContext(),imageView,imageUrl,options);
+        commonLoadImage(imageView.getContext(),imageView,imageUrl,getImageLoaderOptions(options));
     }
 
 
@@ -65,5 +64,9 @@ public abstract class ImageLoaderLogic implements ImageLoader{
 
     //每个不用框架加载图片的逻辑
     abstract void commonLoadImage(Context context , ImageView imageView, Uri imageUri, ImageLoaderOptions options);
+
+    protected ImageLoaderOptions getImageLoaderOptions(ImageLoaderOptions options){
+        return options == null ? defaultOptions : options;
+    }
 
 }

@@ -1,14 +1,15 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.0"
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
     }
     buildTypes {
         release {
@@ -39,4 +40,5 @@ dependencies {
     compile rootProject.ext.libRetrofitVersion //Retrofit
     compile rootProject.ext.libOkhttp;//OkHttp
     compile rootProject.ext.libOkHttpLoggingInterceptor //OkHttp的日志拦截器
+    compile rootProject.ext.libPinYin //汉字转拼音
 }

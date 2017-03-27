@@ -2,7 +2,6 @@ package com.qks.beautyexchange.ui.activity.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.widget.Toast;
 
 import com.qks.beautyexchange.R;
 import com.qks.mylibrary.ui.activity.BaseAppCompatActivity;
@@ -17,7 +16,6 @@ public abstract class BaseActivity extends BaseAppCompatActivity implements
         if (isApplyKitKatTranslucency()) {
             setSystemBarTintDrawable(getResources().getDrawable(R.drawable.sr_primary));
         }
-        Toast.makeText(mContext, "我是一个Toast", Toast.LENGTH_SHORT).show();
     }
 
     protected abstract boolean isApplyKitKatTranslucency();

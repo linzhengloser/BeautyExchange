@@ -19,7 +19,7 @@ def retrofitConverterGsonVersion = "2.0.2"
 def retrofitAdapterRxJavaVersion = "2.0.2"
 def libOkHttpLoggingInterceptorVersion = "3.2.0"
 def libOkHttpVersion = "3.2.0"
-def iRecyclerViewVersion = "0.0.3"
+def libPinYinVersion = "2.0.3";
 
 
 project.ext {
@@ -52,5 +52,6 @@ project.ext {
     libRetrofitConverterGsonVersion = "com.squareup.retrofit2:converter-gson:${retrofitConverterGsonVersion}"
     libRetrofitAdapterRxJava = "com.squareup.retrofit2:adapter-rxjava:${retrofitAdapterRxJavaVersion}"
     libOkHttpLoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${libOkHttpLoggingInterceptorVersion}"
+    libPinYin = "com.github.promeg:tinypinyin:${libPinYinVersion}"
 
 }
