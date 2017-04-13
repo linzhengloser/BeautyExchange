@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.qks.beautyexchange.utils.ImageLoaderUtils;
 import com.zhy.autolayout.utils.AutoUtils;
 
 /**

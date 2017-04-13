@@ -88,10 +88,10 @@ public class TitleItemDecoration extends RecyclerView.ItemDecoration {
                 if(position == 0){
                     drawTitle(c,left,right,child,params,position);
                 }else{
-                    String curentTag = mCityList.get(position).getBaseIndexTag();
+                    String currentTag = mCityList.get(position).getBaseIndexTag();
                     String lastTag = mCityList.get(position-1).getBaseIndexTag();
-                    if(TextUtils.isEmpty(curentTag)||TextUtils.isEmpty(lastTag))return;
-                    if(!curentTag.equals(lastTag)){
+                    if(TextUtils.isEmpty(currentTag)||TextUtils.isEmpty(lastTag))return;
+                    if(!currentTag.equals(lastTag)){
                         drawTitle(c,left,right,child,params,position);
                     }
                 }

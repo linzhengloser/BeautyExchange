@@ -2,7 +2,7 @@ package com.qks.beautyexchange.utils;
 
 /**
  * 图片加载工具类
- * Created by admin on 2016/3/28.
+ * Created by linzheng on 2016/3/28.
  */
 public class ImageLoaderUtils {
 
