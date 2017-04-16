@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.qks.beautyexchange.utils.ImageLoaderUtils;
 import com.zhy.autolayout.utils.AutoUtils;
 
 /**
@@ -84,7 +85,7 @@ public class BaseViewHolder extends RecyclerView.ViewHolder {
     }
 
     public BaseViewHolder setImage(int viewId,String imageUrl){
-        ImageLoaderUtils.getInstance().loadImage(mContext,(ImageView)getView(viewId),imageUrl);
+        ImageLoaderUtils.getInstance().loadImage((ImageView)getView(viewId),imageUrl);
         return this;
     }
 

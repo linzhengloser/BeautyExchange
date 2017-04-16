@@ -16,7 +16,7 @@ import com.zhy.view.flowlayout.TagFlowLayout;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -98,10 +98,10 @@ public class MineStoreCommodityRecyclerViewAdapter extends RecyclerView.Adapter<
 
     public final class MineStoreCommodityHeaderViewHolder extends RecyclerView.ViewHolder {
 
-        @Bind(R.id.tfl_mine_store_commodity_detail_size)
+        @BindView(R.id.tfl_mine_store_commodity_detail_size)
         TagFlowLayout sizeTag;
 
-        @Bind(R.id.tfl_mine_store_commodity_detail_color)
+        @BindView(R.id.tfl_mine_store_commodity_detail_color)
         TagFlowLayout colorTag;
 
         public MineStoreCommodityHeaderViewHolder(View itemView) {

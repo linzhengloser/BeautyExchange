@@ -1,8 +1,10 @@
 package com.qks.beautyexchange.ui.activity.base;
 
+import com.qks.beautyexchange.R;
 import com.qks.beautyexchange.adapter.base.BaseMultiTypeItemRecyclerViewAdapter;
 import com.qks.beautyexchange.adapter.base.BaseViewHolder;
 import com.qks.beautyexchange.adapter.base.MultiItemTypeSupport;
+import com.qks.beautyexchange.ui.view.recyclerview.PullRecyclerView;
 
 import java.util.ArrayList;
 
@@ -13,6 +15,9 @@ public abstract class BaseMultiTypeListActivity<T> extends BaseListActivity<T> {
 
     @Override
     protected void initViewsAndEvents() {
+
+        mPullRecyclerView = (PullRecyclerView) findViewById(R.id.common_pullRecyclerView);
+
         mDatas = new ArrayList<T>(0);
         mAdapter = new BaseMultiTypeItemRecyclerViewAdapter<T>(mContext, mDatas, new MultiItemTypeSupport<T>() {
             @Override
@@ -36,13 +41,18 @@ public abstract class BaseMultiTypeListActivity<T> extends BaseListActivity<T> {
     }
 
     /**
-     * 返回
-     * K --- V
-     * ItemType --- LayoutId
-     * @return
+     * 返回 ItemType 对应的 LayoutId
+     * @param itemType ItemType
+     * @return LayoutId
      */
     protected abstract int getMultiItemTypeRecyclerViewLayoutID(int itemType);
 
+    /**
+     * 返回 ItemType
+     * @param position position
+     * @param data 数据
+     * @return
+     */
     protected abstract int getRecyclerViewItemViewType(int position,T data);
 
     @Override

@@ -8,14 +8,13 @@ import com.qks.beautyexchange.R;
 import com.qks.beautyexchange.ui.activity.base.BaseActivity;
 import com.qks.beautyexchange.ui.view.CardDataItem;
 import com.qks.beautyexchange.ui.view.CardSlidePanel;
-import com.qks.mylibrary.utils.EventCenter;
 import com.qks.mylibrary.utils.NetUtils;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -25,16 +24,12 @@ import butterknife.OnClick;
 public class FindActivity extends BaseActivity {
 
 
-    @Bind(R.id.csp_search_card_slide_panel)
+    @BindView(R.id.csp_search_card_slide_panel)
     CardSlidePanel cspSearch;
 
     @Override
     protected boolean isApplyKitKatTranslucency() {
         return false;
-    }
-
-    @Override
-    protected void onEventComming(EventCenter<?> eventCenter) {
     }
 
     @Override

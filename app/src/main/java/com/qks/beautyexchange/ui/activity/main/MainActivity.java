@@ -14,7 +14,6 @@ import com.qks.beautyexchange.ui.activity.base.BaseMultiTypeListActivity;
 import com.qks.beautyexchange.ui.activity.find.FindActivity;
 import com.qks.beautyexchange.ui.activity.message.MessageActivity;
 import com.qks.beautyexchange.ui.activity.mine.MineActivity;
-import com.qks.mylibrary.utils.EventCenter;
 import com.qks.mylibrary.utils.NetUtils;
 
 import java.util.ArrayList;
@@ -90,7 +89,6 @@ public class MainActivity extends BaseMultiTypeListActivity<String> implements V
             holder.setItemAdapter(R.id.rv_item_main_simple_horizontal_images, linearLayoutManager, new BaseRecyclerViewAdapter(mContext, datas, R.layout.recyclerview_item_main_simple_horizontal) {
                 @Override
                 public void convert(BaseViewHolder holder, Object data) {
-
                 }
             });
         }
@@ -99,11 +97,6 @@ public class MainActivity extends BaseMultiTypeListActivity<String> implements V
     @Override
     protected boolean isApplyKitKatTranslucency() {
         return true;
-    }
-
-    @Override
-    protected void onEventComming(EventCenter<?> eventCenter) {
-
     }
 
     @Override

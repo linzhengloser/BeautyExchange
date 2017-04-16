@@ -237,10 +237,10 @@ public abstract class BaseAppCompatActivity extends AutoLayoutActivity {
      */
 	public void onEventMainThread(EventCenter<?> eventCenter){
 		if(null != eventCenter){
-			onEventComming(eventCenter);
+//			onEventComming(eventCenter);
 		}
 	}
-	
+
 	/**
      * use SytemBarTintManager
      *
@@ -264,7 +264,7 @@ public abstract class BaseAppCompatActivity extends AutoLayoutActivity {
 	 * 用于接收EventBus的Event
 	 * @param eventCenter
 	 */
-	protected abstract void onEventComming(EventCenter<?> eventCenter);
+//	protected abstract void onEventComming(EventCenter<?> eventCenter);
 
 	/**
 	 * 获取Bundle

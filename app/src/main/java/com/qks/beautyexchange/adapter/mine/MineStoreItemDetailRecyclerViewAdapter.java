@@ -11,7 +11,7 @@ import com.qks.beautyexchange.R;
 import com.qks.beautyexchange.adapter.listener.RecyclerViewItemClickListener;
 import com.zhy.autolayout.utils.AutoUtils;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -70,7 +70,7 @@ public class MineStoreItemDetailRecyclerViewAdapter extends RecyclerView.Adapter
         }
     }
     public final class MineStoreItemDetailNormalViewHoder extends RecyclerView.ViewHolder{
-        @Bind(R.id.tv_item_mine_store_item_detail_number)
+        @BindView(R.id.tv_item_mine_store_item_detail_number)
         TextView number; //编号
 
         public MineStoreItemDetailNormalViewHoder(View itemView) {

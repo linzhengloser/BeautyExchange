@@ -10,7 +10,7 @@ import android.widget.ImageView;
 
 import com.qks.beautyexchange.R;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -18,7 +18,7 @@ import butterknife.ButterKnife;
  */
 public class TestActivity extends AppCompatActivity {
 
-    @Bind(R.id.viewpager)
+    @BindView(R.id.viewpager)
     ViewPager viewpager;
 
     @Override
@@ -26,15 +26,6 @@ public class TestActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
         ButterKnife.bind(this);
-//        ServiceUtils.extractData(RetrofitTools.getInstance().createApiService(UserService.class).login("","",""))
-//        .subscribe(user -> {
-//            System.out.println(user.getUser_id());
-//            System.out.println(user.getWeixin_uid());
-//        },throwable -> {
-//            System.out.println(throwable.getCause());
-//            System.out.println(throwable.getMessage());
-//        });
-
         viewpager.setAdapter(new PagerAdapter() {
             @Override
             public int getCount() {

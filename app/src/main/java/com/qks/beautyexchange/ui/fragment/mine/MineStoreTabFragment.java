@@ -7,19 +7,19 @@ import android.view.View;
 import com.qks.beautyexchange.R;
 import com.qks.beautyexchange.adapter.mine.MineStoreRecyclerViewAdapter;
 import com.qks.beautyexchange.ui.fragment.base.BaseFragment;
-import com.qks.mylibrary.utils.EventCenter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
+
 
 /**
  * Created by admin on 2016/3/11.
  */
 public class MineStoreTabFragment extends BaseFragment{
 
-    @Bind(R.id.rv_mine_store)
+    @BindView(R.id.rv_mine_store)
     RecyclerView rvMineStore;
 
 
@@ -37,7 +37,6 @@ public class MineStoreTabFragment extends BaseFragment{
 
     @Override
     protected void onFirstUserVisible() {
-        showToast("onFirstUserVisible");
     }
 
     @Override
@@ -71,8 +70,4 @@ public class MineStoreTabFragment extends BaseFragment{
         rvMineStore.setAdapter(mAdapter);
     }
 
-    @Override
-    protected void onEventComming(EventCenter eventCenter) {
-
-    }
 }

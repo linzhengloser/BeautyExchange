@@ -7,7 +7,6 @@ import android.support.v7.widget.RecyclerView;
 import com.qks.beautyexchange.R;
 import com.qks.beautyexchange.adapter.base.BaseViewHolder;
 import com.qks.beautyexchange.ui.fragment.base.BaseListFragment;
-import com.qks.mylibrary.utils.EventCenter;
 
 /**
  * 新回复
@@ -29,7 +28,7 @@ public class NewCommentFragment extends BaseListFragment<String> {
     @Override
     protected void onFirstUserVisible() {
         hideLoading();
-        showLoading("加载中...");
+        showLoadingView("加载中...");
         mPullRecyclerView.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -49,10 +48,6 @@ public class NewCommentFragment extends BaseListFragment<String> {
     @Override
     protected boolean isBindEventBusHere() {
         return false;
-    }
-
-    @Override
-    protected void onEventComming(EventCenter eventCenter) {
     }
 
 

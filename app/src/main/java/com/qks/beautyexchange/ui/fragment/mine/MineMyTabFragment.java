@@ -4,7 +4,6 @@ import android.view.View;
 
 import com.qks.beautyexchange.R;
 import com.qks.beautyexchange.ui.fragment.base.BaseFragment;
-import com.qks.mylibrary.utils.EventCenter;
 
 /**
  *
@@ -51,8 +50,4 @@ public class MineMyTabFragment extends BaseFragment{
 
     }
 
-    @Override
-    protected void onEventComming(EventCenter eventCenter) {
-
-    }
 }

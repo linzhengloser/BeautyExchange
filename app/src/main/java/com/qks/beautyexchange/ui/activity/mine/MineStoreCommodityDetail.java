@@ -8,10 +8,9 @@ import android.view.View;
 import com.qks.beautyexchange.R;
 import com.qks.beautyexchange.adapter.mine.MineStoreCommodityRecyclerViewAdapter;
 import com.qks.beautyexchange.ui.activity.base.BaseActivity;
-import com.qks.mylibrary.utils.EventCenter;
 import com.qks.mylibrary.utils.NetUtils;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -20,7 +19,7 @@ import butterknife.OnClick;
  */
 public class MineStoreCommodityDetail extends BaseActivity{
 
-    @Bind(R.id.rv_mine_store_commodity_detail)
+    @BindView(R.id.rv_mine_store_commodity_detail)
     RecyclerView rvMineStoreCommodityDetail;
 
     private MineStoreCommodityRecyclerViewAdapter mAdapter;
@@ -28,10 +27,6 @@ public class MineStoreCommodityDetail extends BaseActivity{
     @Override
     protected boolean isApplyKitKatTranslucency() {
         return false;
-    }
-
-    @Override
-    protected void onEventComming(EventCenter<?> eventCenter) {
     }
 
     @Override

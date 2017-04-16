@@ -3,21 +3,17 @@ package com.qks.beautyexchange.ui.activity.base;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.qks.beautyexchange.R;
 import com.qks.beautyexchange.adapter.base.BaseRecyclerViewAdapter;
 import com.qks.beautyexchange.adapter.base.BaseViewHolder;
 import com.qks.beautyexchange.ui.view.recyclerview.PullRecyclerView;
 
 import java.util.ArrayList;
 
-import butterknife.Bind;
-
 /**
  * Created by admin on 2016/4/14.
  */
 public abstract class BaseListActivity<T>  extends BaseActivity implements PullRecyclerView.OnRecyclerViewRefreshListener{
 
-    @Bind(R.id.common_pullRecyclerView)
     protected PullRecyclerView mPullRecyclerView;
 
     protected ArrayList<T> mDatas;
@@ -48,8 +44,6 @@ public abstract class BaseListActivity<T>  extends BaseActivity implements PullR
     protected abstract RecyclerView.LayoutManager getRecyclerViewLayoutManager();
 
     protected abstract void baseRecyclerViewAdapterConvert(BaseViewHolder holder,T data);
-
-
 
 
 }

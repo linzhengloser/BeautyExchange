@@ -10,7 +10,7 @@ import com.qks.beautyexchange.ui.view.recyclerview.PullRecyclerView;
 
 import java.util.ArrayList;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * 封装公共的只有一种ItemType的BaseListFragment
@@ -18,7 +18,7 @@ import butterknife.Bind;
  */
 public abstract class BaseListFragment<T> extends BaseFragment implements PullRecyclerView.OnRecyclerViewRefreshListener{
 
-    @Bind(R.id.common_pullRecyclerView)
+    @BindView(R.id.common_pullRecyclerView)
     protected PullRecyclerView mPullRecyclerView;
 
     protected BaseRecyclerViewAdapter<T> mAdapter;

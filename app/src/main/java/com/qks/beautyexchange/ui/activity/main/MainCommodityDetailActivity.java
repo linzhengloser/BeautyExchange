@@ -8,10 +8,9 @@ import android.view.View;
 import com.qks.beautyexchange.R;
 import com.qks.beautyexchange.adapter.main.MainItemDetailRecyclerViewAdapter;
 import com.qks.beautyexchange.ui.activity.base.BaseActivity;
-import com.qks.mylibrary.utils.EventCenter;
 import com.qks.mylibrary.utils.NetUtils;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -21,7 +20,7 @@ import butterknife.OnClick;
 public class MainCommodityDetailActivity extends BaseActivity {
 
 
-    @Bind(R.id.rv_main_item_detail)
+    @BindView(R.id.rv_main_item_detail)
     RecyclerView rvMainItemDetail;
 
     private MainItemDetailRecyclerViewAdapter mAdapter;
@@ -32,9 +31,6 @@ public class MainCommodityDetailActivity extends BaseActivity {
         return false;
     }
 
-    @Override
-    protected void onEventComming(EventCenter<?> eventCenter) {
-    }
 
     @Override
     protected void getBundleExtras(Bundle extras) {

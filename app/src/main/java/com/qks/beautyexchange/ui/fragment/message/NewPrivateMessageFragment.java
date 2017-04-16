@@ -7,7 +7,6 @@ import com.qks.beautyexchange.R;
 import com.qks.beautyexchange.adapter.base.BaseViewHolder;
 import com.qks.beautyexchange.application.Constant;
 import com.qks.beautyexchange.ui.fragment.base.BaseListFragment;
-import com.qks.mylibrary.utils.EventCenter;
 
 /**
  * Created by admin on 2016/3/9.
@@ -47,11 +46,6 @@ public class NewPrivateMessageFragment extends BaseListFragment<String> {
     @Override
     protected boolean isBindEventBusHere() {
         return false;
-    }
-
-    @Override
-    protected void onEventComming(EventCenter eventCenter) {
-
     }
 
     @Override

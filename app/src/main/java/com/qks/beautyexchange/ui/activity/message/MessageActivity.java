@@ -12,13 +12,12 @@ import com.qks.beautyexchange.ui.activity.base.BaseActivity;
 import com.qks.beautyexchange.ui.fragment.message.NewAttentionFragment;
 import com.qks.beautyexchange.ui.fragment.message.NewCommentFragment;
 import com.qks.beautyexchange.ui.fragment.message.NewPrivateMessageFragment;
-import com.qks.mylibrary.utils.EventCenter;
 import com.qks.mylibrary.utils.NetUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -28,10 +27,10 @@ import butterknife.OnClick;
 public class MessageActivity extends BaseActivity {
 
 
-    @Bind(R.id.tl_message_tab)
+    @BindView(R.id.tl_message_tab)
     TabLayout tlMessageTab;
 
-    @Bind(R.id.vp_message_viewpager)
+    @BindView(R.id.vp_message_viewpager)
     ViewPager vpMessageViewpager;
 
     //标签
@@ -42,10 +41,6 @@ public class MessageActivity extends BaseActivity {
     @Override
     protected boolean isApplyKitKatTranslucency() {
         return true;
-    }
-
-    @Override
-    protected void onEventComming(EventCenter<?> eventCenter) {
     }
 
     @Override
@@ -74,7 +69,6 @@ public class MessageActivity extends BaseActivity {
         vpMessageViewpager.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showToast("onClick");
             }
         });
     }

@@ -8,7 +8,6 @@ import com.qks.beautyexchange.R;
 import com.qks.beautyexchange.adapter.base.BaseViewHolder;
 import com.qks.beautyexchange.application.Constant;
 import com.qks.beautyexchange.ui.fragment.base.BaseListFragment;
-import com.qks.mylibrary.utils.EventCenter;
 
 /**
  * 新关注
@@ -27,7 +26,7 @@ public class NewAttentionFragment extends BaseListFragment<String> {
 
     @Override
     protected void onFirstUserVisible() {
-        showLoading(Constant.Hint.LOADING_HINT);
+        showLoadingView(Constant.Hint.LOADING_HINT);
         mPullRecyclerView.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -49,10 +48,6 @@ public class NewAttentionFragment extends BaseListFragment<String> {
     @Override
     protected boolean isBindEventBusHere() {
         return false;
-    }
-
-    @Override
-    protected void onEventComming(EventCenter eventCenter) {
     }
 
     @Override

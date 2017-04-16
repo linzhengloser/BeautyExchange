@@ -5,32 +5,30 @@ package com.qks.beautyexchange.ui.activity.base;
  */
 public interface BaseView {
 
-	/**
-	 * 加载中
-	 * @param msg
+    /**
+     * 加载中
      */
-	void showLoading(String msg);
+    void showLoadingView(String msg);
 
-	/**
-	 * 隐藏加载
-	 */
-	void hideLoading();
-
-	/**
-	 * 加载异常
-	 * @param msg
+    /**
+     * 隐藏加载
      */
-	void showError(String msg);
+    void hideLoading();
 
-	/**
-	 * 显示异常
-	 * @param msg
+    /**
+     * 加载异常
      */
-	void showException(String msg);
+    void showLoadingErrorView(String msg);
 
-	/**
-	 * 网络异常
-	 */
-	void showNetError();
+    /**
+     * 网络异常
+     * @param msg
+     */
+    void showNetworErrorView(String msg);
+
+    /**
+     * 空数据
+     */
+    void showEmptyView(String msg);
 
 }

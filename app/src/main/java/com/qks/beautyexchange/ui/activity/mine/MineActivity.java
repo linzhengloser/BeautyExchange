@@ -11,10 +11,9 @@ import com.qks.beautyexchange.R;
 import com.qks.beautyexchange.ui.activity.base.BaseActivity;
 import com.qks.beautyexchange.ui.fragment.mine.MineMyTabFragment;
 import com.qks.beautyexchange.ui.fragment.mine.MineStoreTabFragment;
-import com.qks.mylibrary.utils.EventCenter;
 import com.qks.mylibrary.utils.NetUtils;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -23,15 +22,15 @@ import butterknife.OnClick;
 public class MineActivity extends BaseActivity {
 
 
-    @Bind(R.id.fl_mine_frame)
+    @BindView(R.id.fl_mine_frame)
     FrameLayout flMineFrame;
-    @Bind(R.id.iv_mine_store_tab)
+    @BindView(R.id.iv_mine_store_tab)
     ImageView ivStoreTab;//我的选项卡
-    @Bind(R.id.iv_mine_my_tab)
+    @BindView(R.id.iv_mine_my_tab)
     ImageView ivMyTab;//商店选项卡
-    @Bind(R.id.tv_mine_my_tab_text)
+    @BindView(R.id.tv_mine_my_tab_text)
     TextView tvMyTab;//我的选项卡文字
-    @Bind(R.id.tv_mine_store_tab_text)
+    @BindView(R.id.tv_mine_store_tab_text)
     TextView tvStoreTab;//商店选项卡文字
 
     private static final int DEFAULT_SELECTED_TAB = 1;
@@ -39,11 +38,6 @@ public class MineActivity extends BaseActivity {
     @Override
     protected boolean isApplyKitKatTranslucency() {
         return false;
-    }
-
-    @Override
-    protected void onEventComming(EventCenter<?> eventCenter) {
-
     }
 
     @Override
