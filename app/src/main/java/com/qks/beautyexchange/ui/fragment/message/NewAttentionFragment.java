@@ -27,14 +27,15 @@ public class NewAttentionFragment extends BaseListFragment<String> {
     @Override
     protected void onFirstUserVisible() {
         showLoadingView(Constant.Hint.LOADING_HINT);
-        mPullRecyclerView.postDelayed(new Runnable() {
+        new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 for (int i = 0; i<10 ;i++){
                     mDatas.add("1");
                 }
                 mAdapter.notifyDataSetChanged();
-                hideLoading();
+                showLoadingErrorView("加载异常");
+//                hideLoading();
             }
         },3000);
 

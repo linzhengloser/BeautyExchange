@@ -22,7 +22,7 @@ public abstract class BaseFragment extends BaseLazyFragment implements BaseView 
 
     @Override
     public void showNetworErrorView(String msg) {
-        toggleNetworkError(true, msg, null);
+        toggleNetworkError(true, null);
     }
 
     @Override

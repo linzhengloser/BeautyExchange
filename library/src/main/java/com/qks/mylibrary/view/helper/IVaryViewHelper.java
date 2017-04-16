@@ -15,6 +15,6 @@ public interface IVaryViewHelper {
 	
 	Context getContext();
 	
-	View getView();
+	View getLoadingTargetView();
 	
 }

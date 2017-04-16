@@ -19,7 +19,6 @@ import com.qks.mylibrary.receiver.NetChangeObserver;
 import com.qks.mylibrary.receiver.NetStateReceiver;
 import com.qks.mylibrary.utils.EventCenter;
 import com.qks.mylibrary.utils.NetUtils;
-import com.qks.mylibrary.utils.SmartBarUtils;
 import com.qks.mylibrary.view.helper.VaryViewHelperController;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 import com.zhy.autolayout.AutoLayoutActivity;
@@ -63,8 +62,6 @@ public abstract class BaseAppCompatActivity extends AutoLayoutActivity {
 		if(isBindEventBusHere()){
 			EventBus.getDefault().register(this);
 		}
-		//隐藏SmartBar:SmarBar 是魅族手机特有的,但是在魅族最新出来的手机里面取消了SmartBar
-		SmartBarUtils.hide(getWindow().getDecorView());
 
 		//设置透明状态栏
 		setTranslucentStatus(isApplyStatusBarTranslucency());
@@ -132,7 +129,6 @@ public abstract class BaseAppCompatActivity extends AutoLayoutActivity {
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-		ButterKnife.unbind(this);
 		NetStateReceiver.removeRegisterObserver(mNetChangeObserver);
 		if(isBindEventBusHere()){
 			EventBus.getDefault().unregister(this);

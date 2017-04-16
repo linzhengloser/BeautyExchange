@@ -6,33 +6,33 @@
         <project path="$PROJECT_DIR$">
           <extensions>
             <ext name="ext" type="org.gradle.api.internal.plugins.DefaultExtraPropertiesExtension" />
-            <prop name="libRxAndroidVersion" type="org.codehaus.groovy.runtime.GStringImpl">io.reactivex:rxandroid:1.1.0</prop>
-            <prop name="libGlideVersion" type="org.codehaus.groovy.runtime.GStringImpl">com.github.bumptech.glide:glide:3.7.0</prop>
-            <prop name="libJunitVersion" type="org.codehaus.groovy.runtime.GStringImpl">junit:junit:4.12</prop>
+            <prop name="libDesign" type="org.codehaus.groovy.runtime.GStringImpl">com.android.support:design:25.0.1</prop>
             <prop name="libOkhttp" type="org.codehaus.groovy.runtime.GStringImpl">com.squareup.okhttp3:okhttp:3.2.0</prop>
             <prop name="libRetrofitAdapterRxJava" type="org.codehaus.groovy.runtime.GStringImpl">com.squareup.retrofit2:adapter-rxjava:2.0.2</prop>
             <prop name="versionName">1.0.0</prop>
-            <prop name="libRxJavaVersion" type="org.codehaus.groovy.runtime.GStringImpl">io.reactivex:rxjava:1.1.2</prop>
-            <prop name="libDesignVersion" type="org.codehaus.groovy.runtime.GStringImpl">com.android.support:design:25.0.1</prop>
+            <prop name="libAndroidAutoLayout" type="org.codehaus.groovy.runtime.GStringImpl">com.zhy:autolayout:1.4.3</prop>
+            <prop name="libEventBus" type="org.codehaus.groovy.runtime.GStringImpl">org.greenrobot:eventbus:3.0.0</prop>
+            <prop name="libRetrofitConverterGson" type="org.codehaus.groovy.runtime.GStringImpl">com.squareup.retrofit2:converter-gson:2.0.2</prop>
+            <prop name="libButterKnifeAnnotationProcessor" type="org.codehaus.groovy.runtime.GStringImpl">com.jakewharton:butterknife-compiler:8.5.1</prop>
             <prop name="libOkHttpLoggingInterceptor" type="org.codehaus.groovy.runtime.GStringImpl">com.squareup.okhttp3:logging-interceptor:3.2.0</prop>
-            <prop name="libGsonVersion" type="org.codehaus.groovy.runtime.GStringImpl">com.google.code.gson:gson:2.6.2</prop>
+            <prop name="libFlowLayout" type="org.codehaus.groovy.runtime.GStringImpl">com.zhy:flowlayout-lib:1.0.1</prop>
+            <prop name="libJunit" type="org.codehaus.groovy.runtime.GStringImpl">junit:junit:4.12</prop>
+            <prop name="libSupport" type="org.codehaus.groovy.runtime.GStringImpl">com.android.support:appcompat-v7:25.0.1</prop>
+            <prop name="libGlide" type="org.codehaus.groovy.runtime.GStringImpl">com.github.bumptech.glide:glide:3.7.0</prop>
             <prop name="buildToolsVersion">25.0.0</prop>
-            <prop name="libRetrofitVersion" type="org.codehaus.groovy.runtime.GStringImpl">com.squareup.retrofit2:retrofit:2.0.2</prop>
-            <prop name="libAndroidAutoLayoutVersion" type="org.codehaus.groovy.runtime.GStringImpl">com.zhy:autolayout:1.4.3</prop>
-            <prop name="libFlowLayoutVersion" type="org.codehaus.groovy.runtime.GStringImpl">com.zhy:flowlayout-lib:1.0.1</prop>
-            <prop name="libRetrofitConverterGsonVersion" type="org.codehaus.groovy.runtime.GStringImpl">com.squareup.retrofit2:converter-gson:2.0.2</prop>
+            <prop name="libGson" type="org.codehaus.groovy.runtime.GStringImpl">com.google.code.gson:gson:2.6.2</prop>
+            <prop name="libRxJava" type="org.codehaus.groovy.runtime.GStringImpl">io.reactivex:rxjava:1.1.2</prop>
             <prop name="targetSdkVersion" type="java.lang.Integer">25</prop>
+            <prop name="libLogger" type="org.codehaus.groovy.runtime.GStringImpl">com.orhanobut:logger:1.11</prop>
             <prop name="versionCode" type="java.lang.Integer">1</prop>
+            <prop name="libSystemBarTint" type="org.codehaus.groovy.runtime.GStringImpl">com.readystatesoftware.systembartint:systembartint:1.0.4</prop>
             <prop name="minSdkVersion" type="java.lang.Integer">14</prop>
-            <prop name="libEventBusVersion" type="org.codehaus.groovy.runtime.GStringImpl">org.greenrobot:eventbus:3.0.0</prop>
-            <prop name="libButterknifeVersion" type="org.codehaus.groovy.runtime.GStringImpl">com.jakewharton:butterknife:7.0.1</prop>
+            <prop name="libRxAndroid" type="org.codehaus.groovy.runtime.GStringImpl">io.reactivex:rxandroid:1.1.0</prop>
             <prop name="compileSdkVersion" type="java.lang.Integer">25</prop>
             <prop name="libPinYin" type="org.codehaus.groovy.runtime.GStringImpl">com.github.promeg:tinypinyin:2.0.3</prop>
-            <prop name="libSupportVersion" type="org.codehaus.groovy.runtime.GStringImpl">com.android.support:appcompat-v7:25.0.1</prop>
-            <prop name="libCardviewVersion" type="org.codehaus.groovy.runtime.GStringImpl">com.android.support:cardview-v7:25.0.1</prop>
-            <prop name="libSystemBarTintVersion" type="org.codehaus.groovy.runtime.GStringImpl">com.readystatesoftware.systembartint:systembartint:1.0.4</prop>
+            <prop name="libButterknife" type="org.codehaus.groovy.runtime.GStringImpl">com.jakewharton:butterknife:8.5.1</prop>
+            <prop name="libRetrofit" type="org.codehaus.groovy.runtime.GStringImpl">com.squareup.retrofit2:retrofit:2.0.2</prop>
             <prop name="applicationId">com.qks.beautyexchange</prop>
-            <prop name="libLoggerVersion" type="org.codehaus.groovy.runtime.GStringImpl">com.orhanobut:logger:1.11</prop>
             <task name="mergeDebugProguardFiles" type="com.android.build.gradle.internal.tasks.MergeFileTask">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="projects" type="org.gradle.api.tasks.diagnostics.ProjectReportTask">Displays the sub-projects of root project 'BeautyExchange'.&lt;p&gt;&lt;i&gt;Task group: help&lt;i&gt;</task>
             <task name="packageReleaseResources" type="com.android.build.gradle.tasks.MergeResources">&lt;i&gt;Task group: other&lt;i&gt;</task>

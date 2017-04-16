@@ -1,7 +1,6 @@
 package com.qks.beautyexchange.ui.view.recyclerview;
 
 import android.content.Context;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -10,15 +9,18 @@ import android.widget.FrameLayout;
 import com.qks.beautyexchange.R;
 import com.qks.beautyexchange.adapter.base.BaseRecyclerViewAdapter;
 
+import cn.bingoogolapple.refreshlayout.BGANormalRefreshViewHolder;
+import cn.bingoogolapple.refreshlayout.BGARefreshLayout;
+
 /**
  * 封装公共的RecyclerView
  * Created by admin on 2016/4/5.
  */
-public class PullRecyclerView extends FrameLayout implements SwipeRefreshLayout.OnRefreshListener {
+public class PullRecyclerView extends FrameLayout implements BGARefreshLayout.BGARefreshLayoutDelegate {
 
     private RecyclerView mRecyclerView;
 
-    private SwipeRefreshLayout mSwipeRefreshLayout;
+    private BGARefreshLayout mRefreshLayout;
 
     private OnRecyclerViewRefreshListener mRefreshListener;
 
@@ -43,38 +45,26 @@ public class PullRecyclerView extends FrameLayout implements SwipeRefreshLayout.
     private void initViews() {
         LayoutInflater.from(getContext()).inflate(R.layout.common_pull_to_refresh, this, true);
         mRecyclerView = (RecyclerView) findViewById(R.id.common_recyclerView);
-        mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.common_swipeRefreshLayout);
-        mSwipeRefreshLayout.setColorSchemeColors(getResources().getColor(R.color.colorPrimary));
+        mRefreshLayout = (BGARefreshLayout) findViewById(R.id.common_swipeRefreshLayout);
         //刷新和加载跟多回调
-        mSwipeRefreshLayout.setOnRefreshListener(this);
+        mRefreshLayout.setDelegate(this);
+        mRefreshLayout.setRefreshViewHolder(new BGANormalRefreshViewHolder(getContext(),false));
     }
 
     /**
      * 设置刷新
      */
     public void setRefreshing() {
-        mRecyclerView.post(() -> mSwipeRefreshLayout.setRefreshing(true));
+        mRecyclerView.post(() -> mRefreshLayout.beginRefreshing());
     }
 
     /**
      * 刷新完成
      */
     public void onRefreshCompleted() {
-        mSwipeRefreshLayout.setRefreshing(false);
+        mRefreshLayout.endRefreshing();
     }
 
-    /**
-     * 加载完成
-     * @param status
-     */
-    public void onLoadMoreCompleted(int status){
-
-    }
-
-    @Override
-    public void onRefresh() {
-        mRefreshListener.onRefresh();
-    }
 
     public void setOnRefreshListener(OnRecyclerViewRefreshListener listener) {
         this.mRefreshListener = listener;
@@ -87,6 +77,21 @@ public class PullRecyclerView extends FrameLayout implements SwipeRefreshLayout.
 
     public void setLayoutManager(RecyclerView.LayoutManager layoutManager) {
         this.mRecyclerView.setLayoutManager(layoutManager);
+    }
+
+    public RecyclerView getRecyclerView(){
+        return mRecyclerView;
+    }
+
+    @Override
+    public void onBGARefreshLayoutBeginRefreshing(BGARefreshLayout layout) {
+        mRefreshListener.onRefresh();
+    }
+
+    @Override
+    public boolean onBGARefreshLayoutBeginLoadingMore(BGARefreshLayout layout) {
+        mRefreshListener.onLoadMore();
+        return false;
     }
 
     public interface OnRecyclerViewRefreshListener {

@@ -73,7 +73,6 @@ public abstract class BaseLazyFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        ButterKnife.unbind(this);
     }
 
     @Override
@@ -250,7 +249,7 @@ public abstract class BaseLazyFragment extends Fragment {
 
     public void onEventMainThread(EventCenter eventCenter) {
         if (null != eventCenter) {
-            onEventComming(eventCenter);
+//            onEventComming(eventCenter);
         }
     }
 
@@ -301,6 +300,6 @@ public abstract class BaseLazyFragment extends Fragment {
      * 估计跟EventBus
      * @param eventCenter
      */
-    protected abstract void onEventComming(EventCenter eventCenter);
+//    protected abstract void onEventComming(EventCenter eventCenter);
 
 }

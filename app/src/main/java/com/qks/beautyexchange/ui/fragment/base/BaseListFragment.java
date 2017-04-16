@@ -32,7 +32,7 @@ public abstract class BaseListFragment<T> extends BaseFragment implements PullRe
 
     @Override
     protected View getLoadingTargetView() {
-        return mPullRecyclerView;
+        return mPullRecyclerView.getRecyclerView();
     }
 
     @Override

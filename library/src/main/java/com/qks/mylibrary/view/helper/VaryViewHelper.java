@@ -7,31 +7,31 @@ import android.view.ViewGroup;
 
 
 public class VaryViewHelper implements IVaryViewHelper {
-    private View view;
+    private View mLoadingTargetView;
     private ViewGroup parentView;
     private int viewIndex;
     private ViewGroup.LayoutParams params;
     private View currentView;
 
     public VaryViewHelper(View view) {
-        this.view = view;
+        this.mLoadingTargetView = view;
     }
 
     private void init() {
-        params = view.getLayoutParams();
-        if (view.getParent() != null) {
-            parentView = (ViewGroup) view.getParent();
+        params = mLoadingTargetView.getLayoutParams();
+        if (mLoadingTargetView.getParent() != null) {
+            parentView = (ViewGroup) mLoadingTargetView.getParent();
         } else {
-            parentView = (ViewGroup) view.getRootView().findViewById(android.R.id.content);
+            parentView = (ViewGroup) mLoadingTargetView.getRootView().findViewById(android.R.id.content);
         }
         int count = parentView.getChildCount();
         for (int index = 0; index < count; index++) {
-            if (view == parentView.getChildAt(index)) {
+            if (mLoadingTargetView == parentView.getChildAt(index)) {
                 viewIndex = index;
                 break;
             }
         }
-        currentView = view;
+        currentView = mLoadingTargetView;
     }
 
     @Override
@@ -41,7 +41,7 @@ public class VaryViewHelper implements IVaryViewHelper {
 
     @Override
     public void restoreView() {
-        showLayout(view);
+        showLayout(mLoadingTargetView);
     }
 
     @Override
@@ -63,16 +63,16 @@ public class VaryViewHelper implements IVaryViewHelper {
 
     @Override
     public View inflate(int layoutId) {
-        return LayoutInflater.from(view.getContext()).inflate(layoutId, null);
+        return LayoutInflater.from(mLoadingTargetView.getContext()).inflate(layoutId, null);
     }
 
     @Override
     public Context getContext() {
-        return view.getContext();
+        return mLoadingTargetView.getContext();
     }
 
     @Override
-    public View getView() {
-        return view;
+    public View getLoadingTargetView() {
+        return mLoadingTargetView;
     }
 }

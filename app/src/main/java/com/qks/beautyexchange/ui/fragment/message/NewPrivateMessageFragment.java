@@ -26,16 +26,13 @@ public class NewPrivateMessageFragment extends BaseListFragment<String> {
 
     @Override
     protected void onFirstUserVisible() {
-        showLoading(Constant.Hint.LOADING_HINT);
-        mPullRecyclerView.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                for (int i = 0; i < 10; i++) {
-                    mDatas.add("0");
-                }
-                hideLoading();
-                mAdapter.notifyDataSetChanged();
+        showLoadingView(Constant.Hint.LOADING_HINT);
+        mPullRecyclerView.postDelayed(() -> {
+            for (int i = 0; i < 10; i++) {
+                mDatas.add("0");
             }
+            hideLoading();
+            mAdapter.notifyDataSetChanged();
         }, 3000);
     }
 

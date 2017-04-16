@@ -27,7 +27,6 @@ public class NewCommentFragment extends BaseListFragment<String> {
 
     @Override
     protected void onFirstUserVisible() {
-        hideLoading();
         showLoadingView("加载中...");
         mPullRecyclerView.postDelayed(new Runnable() {
             @Override
