@@ -17,9 +17,9 @@ def gsonVersion = "2.6.2"
 def retrofitVersion = "2.0.2"
 def retrofitConverterGsonVersion = "2.0.2"
 def retrofitAdapterRxJavaVersion = "2.0.2"
-def libOkHttpLoggingInterceptorVersion = "3.2.0"
-def libOkHttpVersion = "3.2.0"
-def libPinYinVersion = "2.0.3";
+def okHttpLoggingInterceptorVersion = "3.2.0"
+def okHttpVersion = "3.2.0"
+def pinYinVersion = "2.0.3";
 
 
 project.ext {
@@ -48,10 +48,10 @@ project.ext {
     libRxAndroidVersion = "io.reactivex:rxandroid:${rxAndroidVersion}"
     libGsonVersion = "com.google.code.gson:gson:${gsonVersion}"
     libRetrofitVersion = "com.squareup.retrofit2:retrofit:${retrofitVersion}"
-    libOkhttp="com.squareup.okhttp3:okhttp:${libOkHttpVersion}"
+    libOkhttp="com.squareup.okhttp3:okhttp:${okHttpVersion}"
     libRetrofitConverterGsonVersion = "com.squareup.retrofit2:converter-gson:${retrofitConverterGsonVersion}"
     libRetrofitAdapterRxJava = "com.squareup.retrofit2:adapter-rxjava:${retrofitAdapterRxJavaVersion}"
-    libOkHttpLoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${libOkHttpLoggingInterceptorVersion}"
-    libPinYin = "com.github.promeg:tinypinyin:${libPinYinVersion}"
+    libOkHttpLoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${okHttpLoggingInterceptorVersion}"
+    libPinYin = "com.github.promeg:tinypinyin:${pinYinVersion}"
 
 }
