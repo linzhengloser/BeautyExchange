@@ -37,8 +37,8 @@ dependencies {
     compile rootProject.ext.libRetrofitConverterGson //Retrofit 集成 Gson
     compile rootProject.ext.libRetrofitAdapterRxJava //Retrofit 集成 RxJava
     compile rootProject.ext.libRetrofit //Retrofit
-    compile rootProject.ext.libOkhttp;//OkHttp
     compile rootProject.ext.libOkHttpLoggingInterceptor //OkHttp的日志拦截器
     compile rootProject.ext.libPinYin //汉字转拼音
-    annotationProcessor rootProject.ext.libButterKnifeAnnotationProcessor
+    compile rootProject.ext.libBGARefreshLayout//BGARefreshLayout
+    compile rootProject.ext.libMultiType
 }

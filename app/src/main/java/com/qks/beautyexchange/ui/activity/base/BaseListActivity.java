@@ -4,39 +4,34 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.qks.beautyexchange.R;
-import com.qks.beautyexchange.adapter.base.BaseRecyclerViewAdapter;
-import com.qks.beautyexchange.adapter.base.BaseViewHolder;
 import com.qks.beautyexchange.ui.view.recyclerview.PullRecyclerView;
 
-import java.util.ArrayList;
-
 import butterknife.BindView;
+import me.drakeet.multitype.Items;
+import me.drakeet.multitype.MultiTypeAdapter;
 
 /**
  * Created by admin on 2016/4/14.
  */
-public abstract class BaseListActivity<T>  extends BaseActivity implements PullRecyclerView.OnRecyclerViewRefreshListener{
+public abstract class BaseListActivity extends BaseActivity implements PullRecyclerView.OnRecyclerViewRefreshListener{
 
 
     @BindView(R.id.common_pullRecyclerView)
     protected PullRecyclerView mPullRecyclerView;
 
-    protected ArrayList<T> mDatas;
+    protected Items mDatas;
 
-    protected BaseRecyclerViewAdapter<T> mAdapter;
+    protected MultiTypeAdapter mAdapter;
 
     @Override
     protected void initViewsAndEvents() {
-        mDatas = new ArrayList<T>(0);
-        mAdapter = new BaseRecyclerViewAdapter<T>(mContext, mDatas,getRecyclerViewItemLayoutID()) {
-            @Override
-            public void convert(BaseViewHolder holder, T data) {
-                baseRecyclerViewAdapterConvert(holder,data);
-            }
-        };
+        mDatas = new Items();
+        mAdapter = new MultiTypeAdapter();
+        registerMultiType();
         mPullRecyclerView.setLayoutManager(getRecyclerViewLayoutManager());
-        mPullRecyclerView.setOnRefreshListener(this);
         mPullRecyclerView.setAdapter(mAdapter);
+        mAdapter.setItems(mDatas);
+        mPullRecyclerView.setOnRefreshListener(this);
     }
 
     @Override
@@ -44,11 +39,8 @@ public abstract class BaseListActivity<T>  extends BaseActivity implements PullR
         return mPullRecyclerView.getRecyclerView();
     }
 
-    protected abstract int getRecyclerViewItemLayoutID();
+    protected abstract void registerMultiType();
 
     protected abstract RecyclerView.LayoutManager getRecyclerViewLayoutManager();
-
-    protected abstract void baseRecyclerViewAdapterConvert(BaseViewHolder holder,T data);
-
 
 }

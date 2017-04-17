@@ -40,7 +40,5 @@ dependencies {
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
     releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
     testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
-
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
-    compile 'cn.bingoogolapple:bga-refreshlayout:1.1.7'
 }

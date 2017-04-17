@@ -3,15 +3,15 @@ package com.qks.beautyexchange.ui.fragment.message;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.qks.beautyexchange.R;
-import com.qks.beautyexchange.adapter.base.BaseViewHolder;
+import com.qks.beautyexchange.api.entity.message.PrivateMessage;
 import com.qks.beautyexchange.application.Constant;
 import com.qks.beautyexchange.ui.fragment.base.BaseListFragment;
+import com.qks.beautyexchange.ui.view.multitype.message.NewPrivateMessageItemViewBinder;
 
 /**
  * Created by admin on 2016/3/9.
  */
-public class NewPrivateMessageFragment extends BaseListFragment<String> {
+public class NewPrivateMessageFragment extends BaseListFragment {
 
 
     @Override
@@ -29,7 +29,7 @@ public class NewPrivateMessageFragment extends BaseListFragment<String> {
         showLoadingView(Constant.Hint.LOADING_HINT);
         mPullRecyclerView.postDelayed(() -> {
             for (int i = 0; i < 10; i++) {
-                mDatas.add("0");
+                mDatas.add(new PrivateMessage());
             }
             hideLoading();
             mAdapter.notifyDataSetChanged();
@@ -45,9 +45,10 @@ public class NewPrivateMessageFragment extends BaseListFragment<String> {
         return false;
     }
 
+
     @Override
-    protected int getRecyclerViewItemLayoutID() {
-        return R.layout.recyclerview_item_message_new_private_message;
+    protected void registerMultiType() {
+        mAdapter.register(PrivateMessage.class,new NewPrivateMessageItemViewBinder());
     }
 
     @Override
@@ -56,17 +57,19 @@ public class NewPrivateMessageFragment extends BaseListFragment<String> {
     }
 
     @Override
-    protected void baseRecyclerViewAdapterConvert(BaseViewHolder holder, String data) {
-
-    }
-
-    @Override
     public void onRefresh() {
-
+        mPullRecyclerView.postDelayed(() -> {
+            mPullRecyclerView.setRefreshComplete();
+        },3000);
     }
 
     @Override
     public void onLoadMore() {
-
+        mPullRecyclerView.postDelayed(() -> {
+            for (int i = 0; i < 10; i++) {
+                mDatas.add(new PrivateMessage());
+            }
+            mAdapter.notifyDataSetChanged();
+        },3000);
     }
 }

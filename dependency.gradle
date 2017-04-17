@@ -7,8 +7,6 @@ def butterKnifeVersion = "8.5.1"
 def designVersion = "25.0.1"
 def systemBarTintVersion = "1.0.4"
 def eventBusVersion = "3.0.0"
-def debugLeakCanaryVersion = "1.3.1"
-def releaseLeakCanaryVersion = "1.3.1"
 def loggerVersion = "1.11"
 def flowLayoutVersion = "1.0.1"
 def rxJavaVersion = "1.1.2"
@@ -17,9 +15,10 @@ def gsonVersion = "2.6.2"
 def retrofitVersion = "2.0.2"
 def retrofitConverterGsonVersion = "2.0.2"
 def retrofitAdapterRxJavaVersion = "2.0.2"
-def libOkHttpLoggingInterceptorVersion = "3.2.0"
-def libOkHttpVersion = "3.2.0"
-def libPinYinVersion = "2.0.3";
+def okHttpLoggingInterceptorVersion = "3.2.0"
+def tinyPinYinVersion = "2.0.3"
+def bgaRefreshLayoutVersion = "1.1.7"
+def multiTypeVersion = "2.5.0";
 
 
 project.ext {
@@ -48,10 +47,10 @@ project.ext {
     libRxAndroid = "io.reactivex:rxandroid:${rxAndroidVersion}"
     libGson = "com.google.code.gson:gson:${gsonVersion}"
     libRetrofit = "com.squareup.retrofit2:retrofit:${retrofitVersion}"
-    libOkhttp = "com.squareup.okhttp3:okhttp:${libOkHttpVersion}"
     libRetrofitConverterGson = "com.squareup.retrofit2:converter-gson:${retrofitConverterGsonVersion}"
     libRetrofitAdapterRxJava = "com.squareup.retrofit2:adapter-rxjava:${retrofitAdapterRxJavaVersion}"
-    libOkHttpLoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${libOkHttpLoggingInterceptorVersion}"
-    libPinYin = "com.github.promeg:tinypinyin:${libPinYinVersion}"
-
+    libOkHttpLoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${okHttpLoggingInterceptorVersion}"
+    libPinYin = "com.github.promeg:tinypinyin:${tinyPinYinVersion}"
+    libBGARefreshLayout = "cn.bingoogolapple:bga-refreshlayout:${bgaRefreshLayoutVersion}"
+    libMultiType = "me.drakeet.multitype:multitype:${multiTypeVersion}"
 }

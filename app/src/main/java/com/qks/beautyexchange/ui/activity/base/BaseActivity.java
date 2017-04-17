@@ -13,7 +13,7 @@ public abstract class BaseActivity extends BaseAppCompatActivity implements Base
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (isApplyKitKatTranslucency()) {
-            //使用 SystemBarTint 这个库设置状态栏的眼神
+            //使用 SystemBarTint 这个库设置状态栏的颜色
             setSystemBarTintDrawable(getResources().getDrawable(R.drawable.sr_primary));
         }
     }

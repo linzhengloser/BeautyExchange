@@ -4,16 +4,16 @@ import android.os.Handler;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.qks.beautyexchange.R;
-import com.qks.beautyexchange.adapter.base.BaseViewHolder;
+import com.qks.beautyexchange.api.entity.message.Attention;
 import com.qks.beautyexchange.application.Constant;
 import com.qks.beautyexchange.ui.fragment.base.BaseListFragment;
+import com.qks.beautyexchange.ui.view.multitype.message.NewAttentionItemViewBinder;
 
 /**
  * 新关注
  * Created by admin on 2016/3/9.
  */
-public class NewAttentionFragment extends BaseListFragment<String> {
+public class NewAttentionFragment extends BaseListFragment {
 
     @Override
     protected void onUserInvisible() {
@@ -27,18 +27,13 @@ public class NewAttentionFragment extends BaseListFragment<String> {
     @Override
     protected void onFirstUserVisible() {
         showLoadingView(Constant.Hint.LOADING_HINT);
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                for (int i = 0; i<10 ;i++){
-                    mDatas.add("1");
-                }
-                mAdapter.notifyDataSetChanged();
-                showLoadingErrorView("加载异常");
-//                hideLoading();
+        new Handler().postDelayed(() -> {
+            for (int i = 0; i<10 ;i++){
+                mDatas.add(new Attention());
             }
+            mAdapter.notifyDataSetChanged();
+            hideLoading();
         },3000);
-
     }
 
     @Override
@@ -51,9 +46,10 @@ public class NewAttentionFragment extends BaseListFragment<String> {
         return false;
     }
 
+
     @Override
-    protected int getRecyclerViewItemLayoutID() {
-        return R.layout.recyclerview_item_message_new_attention;
+    protected void registerMultiType() {
+        mAdapter.register(Attention.class,new NewAttentionItemViewBinder());
     }
 
     @Override
@@ -61,28 +57,21 @@ public class NewAttentionFragment extends BaseListFragment<String> {
         return new LinearLayoutManager(mContext);
     }
 
-    @Override
-    protected void baseRecyclerViewAdapterConvert(BaseViewHolder holder, String data) {
-
-    }
 
     @Override
     public void onRefresh() {
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                mPullRecyclerView.onRefreshCompleted();
-            }
-        },2000);
+        new Handler().postDelayed(() -> mPullRecyclerView.setRefreshComplete(),2000);
     }
 
     @Override
     public void onLoadMore() {
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
+        new Handler().postDelayed(() -> {
+            for (int i = 0; i<10 ;i++){
+                mDatas.add(new Attention());
             }
+            mAdapter.notifyDataSetChanged();
+            mPullRecyclerView.setLoadMoreComplete();
         },3000);
     }
 }

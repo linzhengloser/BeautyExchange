@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.widget.FrameLayout;
 
 import com.qks.beautyexchange.R;
-import com.qks.beautyexchange.adapter.base.BaseRecyclerViewAdapter;
 
 import cn.bingoogolapple.refreshlayout.BGANormalRefreshViewHolder;
 import cn.bingoogolapple.refreshlayout.BGARefreshLayout;
@@ -24,7 +23,7 @@ public class PullRecyclerView extends FrameLayout implements BGARefreshLayout.BG
 
     private OnRecyclerViewRefreshListener mRefreshListener;
 
-    private BaseRecyclerViewAdapter<?> mAdapter;
+    private RecyclerView.Adapter mAdapter;
 
 
     public PullRecyclerView(Context context) {
@@ -48,7 +47,7 @@ public class PullRecyclerView extends FrameLayout implements BGARefreshLayout.BG
         mRefreshLayout = (BGARefreshLayout) findViewById(R.id.common_swipeRefreshLayout);
         //刷新和加载跟多回调
         mRefreshLayout.setDelegate(this);
-        mRefreshLayout.setRefreshViewHolder(new BGANormalRefreshViewHolder(getContext(),false));
+        mRefreshLayout.setRefreshViewHolder(new BGANormalRefreshViewHolder(getContext(),true));
     }
 
     /**
@@ -59,10 +58,24 @@ public class PullRecyclerView extends FrameLayout implements BGARefreshLayout.BG
     }
 
     /**
+     * 设置加载更多
+     */
+    public void setLoadMoring(){
+        mRecyclerView.post(() -> mRefreshLayout.beginLoadingMore());
+    }
+
+    /**
      * 刷新完成
      */
-    public void onRefreshCompleted() {
+    public void setRefreshComplete() {
         mRefreshLayout.endRefreshing();
+    }
+
+    /**
+     * 加载完成
+     */
+    public void setLoadMoreComplete(){
+        mRefreshLayout.endLoadingMore();
     }
 
 
@@ -70,7 +83,7 @@ public class PullRecyclerView extends FrameLayout implements BGARefreshLayout.BG
         this.mRefreshListener = listener;
     }
 
-    public void setAdapter(BaseRecyclerViewAdapter<?> adapter) {
+    public void setAdapter(RecyclerView.Adapter adapter) {
         this.mAdapter = adapter;
         mRecyclerView.setAdapter(mAdapter);
     }
@@ -91,7 +104,7 @@ public class PullRecyclerView extends FrameLayout implements BGARefreshLayout.BG
     @Override
     public boolean onBGARefreshLayoutBeginLoadingMore(BGARefreshLayout layout) {
         mRefreshListener.onLoadMore();
-        return false;
+        return true;
     }
 
     public interface OnRecyclerViewRefreshListener {

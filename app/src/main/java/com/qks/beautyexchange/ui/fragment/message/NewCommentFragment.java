@@ -4,15 +4,15 @@ import android.os.Handler;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.qks.beautyexchange.R;
-import com.qks.beautyexchange.adapter.base.BaseViewHolder;
+import com.qks.beautyexchange.api.entity.message.Comment;
 import com.qks.beautyexchange.ui.fragment.base.BaseListFragment;
+import com.qks.beautyexchange.ui.view.multitype.message.NewCommentItemViewBinder;
 
 /**
  * 新回复
  * Created by admin on 2016/3/9.
  */
-public class NewCommentFragment extends BaseListFragment<String> {
+public class NewCommentFragment extends BaseListFragment {
 
 
     @Override
@@ -32,7 +32,7 @@ public class NewCommentFragment extends BaseListFragment<String> {
             @Override
             public void run() {
                 for (int i = 0; i < 10; i++) {
-                    mDatas.add("1");
+                    mDatas.add(new Comment());
                 }
                 hideLoading();
                 mAdapter.notifyDataSetChanged();
@@ -51,8 +51,8 @@ public class NewCommentFragment extends BaseListFragment<String> {
 
 
     @Override
-    protected int getRecyclerViewItemLayoutID() {
-        return R.layout.recyclerview_item_message_new_comment;
+    protected void registerMultiType() {
+        mAdapter.register(Comment.class,new NewCommentItemViewBinder());
     }
 
     @Override
@@ -61,16 +61,11 @@ public class NewCommentFragment extends BaseListFragment<String> {
     }
 
     @Override
-    protected void baseRecyclerViewAdapterConvert(BaseViewHolder holder, String data) {
-
-    }
-
-    @Override
     public void onRefresh() {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                mPullRecyclerView.onRefreshCompleted();
+                mPullRecyclerView.setRefreshComplete();
             }
         },2000);
     }
@@ -80,6 +75,10 @@ public class NewCommentFragment extends BaseListFragment<String> {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+                for (int i = 0; i < 10; i++) {
+                    mDatas.add(new Comment());
+                    mAdapter.notifyDataSetChanged();
+                }
             }
         },3000);
     }

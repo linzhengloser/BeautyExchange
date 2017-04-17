@@ -8,19 +8,19 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.qks.beautyexchange.R;
-import com.qks.beautyexchange.adapter.base.BaseRecyclerViewAdapter;
-import com.qks.beautyexchange.adapter.base.BaseViewHolder;
-import com.qks.beautyexchange.ui.activity.base.BaseMultiTypeListActivity;
+import com.qks.beautyexchange.api.entity.main.MainAdvertisementItem;
+import com.qks.beautyexchange.api.entity.main.MainNormalItem;
+import com.qks.beautyexchange.ui.activity.base.BaseListActivity;
 import com.qks.beautyexchange.ui.activity.find.FindActivity;
 import com.qks.beautyexchange.ui.activity.message.MessageActivity;
 import com.qks.beautyexchange.ui.activity.mine.MineActivity;
+import com.qks.beautyexchange.ui.view.multitype.main.MainAdvertisementItemViewBinder;
+import com.qks.beautyexchange.ui.view.multitype.main.MainNormalItemViewBinder;
 import com.qks.mylibrary.utils.NetUtils;
-
-import java.util.ArrayList;
 
 import butterknife.OnClick;
 
-public class MainActivity extends BaseMultiTypeListActivity<String> implements View.OnClickListener {
+public class MainActivity extends BaseListActivity implements View.OnClickListener {
 
     @OnClick({R.id.ll_main, R.id.ll_find, R.id.ll_message, R.id.ll_mine})
     public void onClick(View view) {
@@ -40,58 +40,31 @@ public class MainActivity extends BaseMultiTypeListActivity<String> implements V
                 readyGo(MineActivity.class);
                 break;
         }
-
     }
-
 
     @Override
     protected void initViewsAndEvents() {
         //必须调用Supper的initViewsAndEvents
         super.initViewsAndEvents();
         for (int i = 0; i < 10; i++) {
-            mDatas.add("1");
+            if(i == 3 || i == 6 ){
+                mDatas.add(new MainAdvertisementItem());
+            }else{
+                mDatas.add(new MainNormalItem());
+            }
         }
         mAdapter.notifyDataSetChanged();
     }
 
     @Override
-    protected int getMultiItemTypeRecyclerViewLayoutID(int itemType) {
-        return itemType == 1 ? R.layout.recyclerview_item_main_what_hot : R.layout.recyclerview_item_main_simple;
-    }
-
-    @Override
-    protected int getRecyclerViewItemViewType(int position, String data) {
-        return position == 3 ? 1 : 0;
+    protected void registerMultiType() {
+        mAdapter.register(MainNormalItem.class,new MainNormalItemViewBinder());
+        mAdapter.register(MainAdvertisementItem.class,new MainAdvertisementItemViewBinder());
     }
 
     @Override
     protected RecyclerView.LayoutManager getRecyclerViewLayoutManager() {
         return new LinearLayoutManager(mContext);
-    }
-
-    @Override
-    protected void baseRecyclerViewAdapterConvert(BaseViewHolder holder, String data) {
-        ArrayList<String> datas = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            datas.add("1");
-        }
-        
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mContext);
-        linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
-        if (holder.getConverViewPosition() == 3) {
-            holder.setItemAdapter(R.id.rv_item_main_what_hot_horizontal_images, linearLayoutManager, new BaseRecyclerViewAdapter(mContext, datas, R.layout.recyclerview_item_main_what_hot_horizontal) {
-                @Override
-                public void convert(BaseViewHolder holder, Object data) {
-
-                }
-            });
-        } else {
-            holder.setItemAdapter(R.id.rv_item_main_simple_horizontal_images, linearLayoutManager, new BaseRecyclerViewAdapter(mContext, datas, R.layout.recyclerview_item_main_simple_horizontal) {
-                @Override
-                public void convert(BaseViewHolder holder, Object data) {
-                }
-            });
-        }
     }
 
     @Override
@@ -131,12 +104,21 @@ public class MainActivity extends BaseMultiTypeListActivity<String> implements V
 
     @Override
     public void onRefresh() {
-        new Handler().postDelayed(() -> mPullRecyclerView.onRefreshCompleted(),2000);
+        new Handler().postDelayed(() -> mPullRecyclerView.setRefreshComplete(),2000);
     }
 
     @Override
     public void onLoadMore() {
         new Handler().postDelayed(() -> {
+            for (int i = 0; i < 10; i++) {
+                if(i == 3 || i == 6 ){
+                    mDatas.add(new MainAdvertisementItem());
+                }else{
+                    mDatas.add(new MainNormalItem());
+                }
+            }
+            mAdapter.notifyDataSetChanged();
+            mPullRecyclerView.setLoadMoreComplete();
         },3000);
     }
 }
