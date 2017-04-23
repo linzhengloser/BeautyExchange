@@ -8,15 +8,15 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.qks.beautyexchange.R;
+import com.qks.beautyexchange.api.entity.main.Animal;
 import com.qks.beautyexchange.api.entity.main.MainAdvertisementItem;
 import com.qks.beautyexchange.api.entity.main.MainNormalItem;
 import com.qks.beautyexchange.ui.activity.base.BaseListActivity;
 import com.qks.beautyexchange.ui.activity.find.FindActivity;
 import com.qks.beautyexchange.ui.activity.message.MessageActivity;
 import com.qks.beautyexchange.ui.activity.mine.MineActivity;
-import com.qks.beautyexchange.ui.view.multitype.main.MainAdvertisementItemViewBinder;
-import com.qks.beautyexchange.ui.view.multitype.main.MainNormalItemViewBinder;
 import com.qks.mylibrary.utils.NetUtils;
+import com.qks.mylibrary.utils.ToastUtils;
 
 import butterknife.OnClick;
 
@@ -54,12 +54,10 @@ public class MainActivity extends BaseListActivity implements View.OnClickListen
             }
         }
         mAdapter.notifyDataSetChanged();
-    }
 
-    @Override
-    protected void registerMultiType() {
-        mAdapter.register(MainNormalItem.class,new MainNormalItemViewBinder());
-        mAdapter.register(MainAdvertisementItem.class,new MainAdvertisementItemViewBinder());
+        Animal animal = Animal.create(1,"大象");
+        ToastUtils.showToast(mContext,animal.toString());
+
     }
 
     @Override

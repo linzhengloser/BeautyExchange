@@ -37,6 +37,7 @@ public abstract class BaseListFragment extends BaseFragment implements PullRecyc
     protected void initViewsAndEvents() {
         mDatas = new Items();
         mAdapter = new MultiTypeAdapter();
+        mAdapter.applyGlobalMultiTypePool();
         registerMultiType();
         mPullRecyclerView.setLayoutManager(getRecyclerViewLayoutManager());
         mPullRecyclerView.setAdapter(mAdapter);
@@ -44,7 +45,7 @@ public abstract class BaseListFragment extends BaseFragment implements PullRecyc
         mPullRecyclerView.setOnRefreshListener(this);
     }
 
-    protected abstract void registerMultiType();
+    protected void registerMultiType(){};
 
     protected abstract RecyclerView.LayoutManager getRecyclerViewLayoutManager();
 

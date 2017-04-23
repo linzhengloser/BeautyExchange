@@ -27,6 +27,8 @@ public abstract class BaseListActivity extends BaseActivity implements PullRecyc
     protected void initViewsAndEvents() {
         mDatas = new Items();
         mAdapter = new MultiTypeAdapter();
+        //使用全局的 MultiTypePool，如果在registerMultiType方法中使用了mAdapter.register(class,itemviewbinder),那么优先使用register的。
+        mAdapter.applyGlobalMultiTypePool();
         registerMultiType();
         mPullRecyclerView.setLayoutManager(getRecyclerViewLayoutManager());
         mPullRecyclerView.setAdapter(mAdapter);
@@ -39,7 +41,7 @@ public abstract class BaseListActivity extends BaseActivity implements PullRecyc
         return mPullRecyclerView.getRecyclerView();
     }
 
-    protected abstract void registerMultiType();
+    protected void registerMultiType(){};
 
     protected abstract RecyclerView.LayoutManager getRecyclerViewLayoutManager();
 

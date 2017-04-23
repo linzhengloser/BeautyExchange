@@ -157,27 +157,5 @@
 
     </LinearLayout>
 
-    <!-- 首页可拖动相机 -->
-    <com.qks.beautyexchange.ui.view.AutoBackLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <com.qks.beautyexchange.ui.view.ShadowView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:alpha="0.0"
-            android:background="@color/main_shadow_bg"/>
-
-        <ImageView
-            android:layout_width="185px"
-            android:layout_height="185px"
-            android:layout_gravity="bottom|right"
-            android:layout_marginBottom="111px"
-            android:scaleType="fitXY"
-            android:src="@mipmap/main_camera"
-            app:layout_auto_basewidth="height|width"/>
-
-
-    </com.qks.beautyexchange.ui.view.AutoBackLayout>
 
 </FrameLayout>

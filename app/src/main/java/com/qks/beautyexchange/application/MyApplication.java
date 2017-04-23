@@ -5,8 +5,14 @@ import android.app.Application;
 import com.orhanobut.logger.LogLevel;
 import com.orhanobut.logger.Logger;
 import com.qks.beautyexchange.BuildConfig;
+import com.qks.beautyexchange.api.entity.main.MainAdvertisementItem;
+import com.qks.beautyexchange.api.entity.main.MainNormalItem;
+import com.qks.beautyexchange.ui.view.multitype.main.MainAdvertisementItemViewBinder;
+import com.qks.beautyexchange.ui.view.multitype.main.MainNormalItemViewBinder;
 import com.qks.mylibrary.receiver.NetStateReceiver;
 import com.squareup.leakcanary.LeakCanary;
+
+import me.drakeet.multitype.GlobalMultiTypePool;
 
 /**
  * Created by admin on 2016/3/8.
@@ -36,6 +42,11 @@ public class MyApplication extends Application {
         }
         //初始化Logger
         Logger.init(TAG).setMethodCount(2).setMethodCount(2).setLogLevel(logLevel);
+
+        //registerGlobalItemViewBinder
+        GlobalMultiTypePool.register(MainNormalItem.class,new MainNormalItemViewBinder());
+        GlobalMultiTypePool.register(MainAdvertisementItem.class,new MainAdvertisementItemViewBinder());
+
     }
 
 
