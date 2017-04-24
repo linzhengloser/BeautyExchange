@@ -25,10 +25,7 @@
 
         <!-- 主界面 -->
         <activity android:name=".ui.activity.main.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <!-- 消息界面 -->
         <activity android:name=".ui.activity.message.MessageActivity" />
@@ -53,6 +50,10 @@
         </activity>
         <!--测试Activity-->
         <activity android:name=".api.common.TestActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
